@@ -1,0 +1,281 @@
+jamin (0.98.9~git20170111~199091~repack1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  * New upstream version 0.98.9~git20170111~199091~repack1
+    (Closes: #848672)
+
+  [ Alessio Treglia ]
+  * Replace negated list of architectures with linux-any (Closes: #634375)
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * ACK NMU (Bug#818390)
+    Thanks to Helmut Grohne <helmut@subdivi.de>
+  * Refreshed patches
+  * Fixed typos
+  * Patched in missing files
+  * Added keywords to .desktop file
+  * Wrapper-script for starting jamin via desktop file
+  * Fixed locale ID for Czech (It's 'cs')
+
+  * Switched B-D from gtk2 to gtk3/clutter
+  * Used CDBS' autoreconf.mk (Closes: #829866)
+  * Unconditionally include CDBS's utils.mk
+  * Canonical Vcs-* stanzas
+  * Update d/copyright(_hints) (and use copyright-format 1.0)
+  * Dropped .menu file (Following Tech-CTTE decision on #741573)
+
+  * Bumped dh-compat level to 9
+  * Bumped standards-version to 3.9.8
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Wed, 11 Jan 2017 21:31:55 +0100
+
+jamin (0.97.14~cvs~81203-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Pass --add-missing to automake (Closes: #818390)
+
+ -- Helmut Grohne <helmut@subdivi.de>  Thu, 15 Dec 2016 09:38:51 +0100
+
+jamin (0.97.14~cvs~81203-4) unstable; urgency=low
+
+  * Team upload.
+  * ACK NMU (bug#588554), thanks to Alexander Reichle-Schmehl for the
+    good job:
+    - debian/patches/1004_install_correct_dir.patch: Install files into
+      /usr/lib instead of /usr/lib64.
+  * Fix desktop file as Freedesktop.org's per-spec:
+    - Remove deprecated Encoding key.
+    - Remove deprecated Application from Categories field.
+    - Append Audio to Categories field.
+  * jamin.1 documents both 'jamin' and 'jamin-scene' commands, link
+    jamin.1.gz to jamin-scene.1.gz; thanks to Nicholas Humfrey for
+    the report (Closes: #329960).
+  * Get rid of unneeded *.la files (Closes: #621646).
+  * Add DEP-3 compliant header to the patches.
+  * debian/copyright:
+    - Fix small typo in the source URL.
+  * debian/control:
+    - Add Homepage field.
+    - Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Mon, 09 May 2011 12:32:14 +0200
+
+jamin (0.97.14~cvs~81203-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/patches/1004_install_correct_dir.patch: Install files into
+    /usr/lib instead of /usr/lib64 (Closes: #588554)
+
+ -- Alexander Reichle-Schmehl <tolimar@debian.org>  Thu, 15 Jul 2010 15:00:24 +0200
+
+jamin (0.97.14~cvs~81203-3) unstable; urgency=low
+
+  * Revert to depend (not just recommend) swh-plugins.
+    Thanks to Jaromír Mikeš.
+  * Refresh patch, using compacting quilt options --no-timestamps
+    --no-index -pab.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 02 Apr 2010 21:20:49 +0200
+
+jamin (0.97.14~cvs~81203-2) unstable; urgency=low
+
+  * Update feature list in long description to match website.
+    Closes: bug#412091, thanks to Mike O'Connor.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 12 Mar 2010 19:32:59 +0100
+
+jamin (0.97.14~cvs~81203-1) unstable; urgency=low
+
+  * Friendly takeover: Maintain in Debian Multimedia Team, with myself
+    as Uploader. Thanks for your contributions, Robert.
+  * New upstream development snapshot.
+  * Use dpkg source format "3.0 (quilt)".
+  * Revert packaging cruft.
+  * Isolate patches:
+    + 1001: use AM_FLAGS for CFLAGS.
+    + 1002: compile with fPIC against renamed jamincont_1912.c.
+    Disable both patches (but keep in source).
+  * Add patch 1003 to add dynamic linking. Hopefully closes: bug#554928,
+    thanks to Peter Fritzsche.
+  * Enable CDBS autoreconf.
+  * Enable CDBS conditional control file updating.
+  * Enable CDBS copyright check.
+  * Rewrite watch file. Closes: bug#449805, thanks to Raphael Geissert.
+  * Update section name in menu file. Quote strings.
+  * Drop superfluous dirs and docs files.
+  * Bump debhelper compat level to 6. Tighten build-dependency
+    accordingly.
+  * Drop superfluous build-dependency on perl-base.
+  * Build-depend on libjack-dev (not libjack0.100.0-dev). Closes:
+    bug#527420, thanks to Felipe Sateler.
+  * Build-depend on liblo-dev (not liblo0-dev).
+  * Build-depend on intltool, needed for our autotools bootstrapping.
+  * Build-depend unversioned on swh-plugins (satisified in oldstable).
+  * Make binary dependencies unversioned (satisified in oldstable).
+  * Recommend (not depend on) swh-plugins, and fallback to virtual
+    ladspa-plugin.
+  * Add proper licensing header to rules file.
+  * Rewrite copyright file as draft DEP5 rev. 135 format. Closes:
+    bug#412110, thanks to Mike O'Connor.
+  * Bump Standards-Version to 3.8.4.
+  * Drop no longer relevant README.Debian.
+  * Packaging maintained in Git: Add Vcs-* stanzas to control file.
+  * Add git-buildpackage config, enabling tag signing and pristine-tar.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 12 Mar 2010 13:06:51 +0100
+
+jamin (0.95.0-4) unstable; urgency=low
+
+  * Porter NMU.
+  * Don't depends on libasound2-dev on non-linux architectures. closes: 
+    #327647.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sun, 10 Dec 2006 21:24:20 +0100
+
+jamin (0.95.0-3) unstable; urgency=low
+
+  * rebuild against jack 0.100.0 for unstable
+
+ -- Robert Jordens <jordens@debian.org>  Sat,  2 Jul 2005 14:47:32 +0200
+
+jamin (0.95.0-2) experimental; urgency=low
+
+  * rebuild against jack 0.100.0
+
+ -- Robert Jordens <jordens@debian.org>  Tue, 21 Jun 2005 22:52:20 +0200
+
+jamin (0.95.0-1) unstable; urgency=low
+
+  * new upstream release
+
+ -- Robert Jordens <jordens@debian.org>  Thu, 28 Apr 2005 21:09:29 +0200
+
+jamin (0.9.0+0.95.0rc3-1) unstable; urgency=low
+
+  * new upstream release candidate
+
+ -- Robert Jordens <jordens@debian.org>  Sun,  3 Apr 2005 12:06:31 +0200
+
+jamin (0.9.0+0.95.0rc2-1) unstable; urgency=low
+
+  * new upstream prerelease
+
+ -- Robert Jordens <jordens@debian.org>  Thu, 24 Mar 2005 17:08:30 +0100
+
+jamin (0.9.0+0.95.0beta6-1) unstable; urgency=low
+
+  * new upstream release
+  * debian/control: added libxml-parser-perl to b-d, needed for intltool
+
+ -- Robert Jordens <jordens@debian.org>  Fri, 11 Feb 2005 22:24:25 +0100
+
+jamin (0.9.0-7) unstable; urgency=low
+
+  * configure.in: gettext fix;
+    closes: Bug#288154: jamin: contains po file under /usr/lib/locale
+    installed as mo file
+
+ -- Robert Jordens <jordens@debian.org>  Mon,  3 Jan 2005 20:35:51 +0100
+
+jamin (0.9.0-6) unstable; urgency=high
+
+  * urgency high because this fixes an RC bug
+  * src/{jamin-scene.c,main.c}, controller/jamincont_1912.so.c:
+    liblo0-dev's lo.h has moved; closes: Bug#282363
+
+ -- Robert Jordens <jordens@debian.org>  Sun, 21 Nov 2004 23:31:24 +0100
+
+jamin (0.9.0-5) unstable; urgency=medium
+
+  * urgency medium because this fixes an RC bug
+  * controller/Makefile*: _compile_ with -fPIC, not link; really 
+    closes: Bug#269781
+
+ -- Robert Jordens <jordens@debian.org>  Fri,  3 Sep 2004 16:06:25 +0200
+
+jamin (0.9.0-4) unstable; urgency=medium
+
+  * urgency medium because this fixes an RC bug
+  * controller/Makefile*: compile with -fPIC; closes: Bug#269781
+
+ -- Robert Jordens <jordens@debian.org>  Fri,  3 Sep 2004 14:43:20 +0200
+
+jamin (0.9.0-3) unstable; urgency=low
+
+  * upload 0.9.0-2 from experimental unchanged to unstable (changes: build
+    with liblo0's OSC support)
+
+ -- Robert Jordens <jordens@debian.org>  Thu,  2 Sep 2004 18:19:53 +0200
+
+jamin (0.9.0-2) experimental; urgency=medium
+
+  * upload to experimental to not hinder transition to testing
+  * debian/control: build with liblo0-dev's OSC support since liblo0 is now in
+    unstable
+
+ -- Robert Jordens <jordens@debian.org>  Fri,  6 Aug 2004 20:47:58 +0200
+
+jamin (0.9.0-1) unstable; urgency=low
+
+  * new upstream release
+
+ -- Robert Jordens <jordens@debian.org>  Fri,  6 Aug 2004 19:09:49 +0200
+
+jamin (0.8.0+0.9.0beta10-1) unstable; urgency=low
+
+  * debian/watch: added
+  * new upstream snapshot (version 0.9.0beta10):
+    + debian/control: needs newer swh-plugins (>= 0.4.6), and doesn't use
+      plugins from old ones anymore: closes: Bug#260220
+    + although this is only a snapshot, it's still better than a non-working
+      package
+
+ -- Robert Jordens <jordens@debian.org>  Sat, 31 Jul 2004 22:44:30 +0200
+
+jamin (0.8.0-1) unstable; urgency=low
+
+  * new upstream release
+  * build against libjack0.80.0-dev
+
+ -- Robert Jordens <jordens@debian.org>  Sat, 17 Jan 2004 12:14:37 +0100
+
+jamin (0.7.0+cvs031231-1) experimental; urgency=low
+
+  * new upstream release, upload to experimental
+
+ -- Robert Jordens <jordens@debian.org>  Wed, 31 Dec 2003 14:45:27 +0100
+
+jamin (0.5.17+cvs030927-1) experimental; urgency=low
+
+  * new upstream release, upload to experimental
+
+ -- Robert Jordens <jordens@debian.org>  Sat, 27 Sep 2003 01:54:08 +0200
+
+jamin (0.5.14+cvs030914-2) unstable; urgency=low
+
+  * debian/control: add the missing comma between ${shlibs:Depends} 
+    and ${misc:Depends}; closes: Bug#211453
+
+ -- Robert Jordens <jordens@debian.org>  Wed, 17 Sep 2003 23:51:17 +0200
+
+jamin (0.5.14+cvs030914-1) unstable; urgency=low
+
+  * new upstream release from CVS
+  * debian/menu: added hints
+  * debian/README.Debian: added with hint about possible file format change
+  * debian/jamin.sgml is now GPL
+
+ -- Robert Jordens <jordens@debian.org>  Sun, 14 Sep 2003 22:02:29 +0200
+
+jamin (0.5.12+cvs030908-1) unstable; urgency=low
+
+  * Initial Release; closes: Bug#209178 (the ITP)
+  * configure.in: use AM_CFLAGS for CFLAGS
+  * added src/state-vars.txt from cvs
+  * renewed config.{guess,sub}
+  * debian/jamin.sgml: wrote manpage
+  * src/plugin.c: adjusted plugin_path to /usr/lib/ladspa
+
+ -- Robert Jordens <jordens@debian.org>  Mon,  8 Sep 2003 10:23:43 +0200
+

@@ -1,0 +1,28 @@
+Index: jamin/configure.in
+===================================================================
+--- jamin.orig/configure.in
++++ jamin/configure.in
+@@ -24,7 +24,8 @@
+ AC_PROG_INTLTOOL
+ 
+ CFLAGS_OPT=$CFLAGS
+-CFLAGS=$USER_CFLAGS
++AM_CFLAGS=$USER_CFLAGS
++AC_SUBST(AM_CFLAGS)
+ AC_SUBST(CFLAGS_OPT)
+ 
+ AC_ARG_ENABLE(double-fft, [  --enable-double-fft Enable double precision fourier transform code - not recommended])
+Index: jamin/src/Makefile.am
+===================================================================
+--- jamin.orig/src/Makefile.am
++++ jamin/src/Makefile.am
+@@ -3,7 +3,8 @@
+ INCLUDES = \
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+ 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+-	@PACKAGE_CFLAGS@ @JAMIN_CFLAGS@
++	@PACKAGE_CFLAGS@ \
++	@AM_CFLAGS@
+ 
+ # use a convenience library to build non-optimized sources.
+ noinst_LIBRARIES	= libnopt.a

@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Format: 3.0 (quilt)
+Source: jamin
+Binary: jamin
+Architecture: any
+Version: 0.98.9~git20170111~199091~repack1-1
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Uploaders:  Jonas Smedegaard <dr@jones.dk>,
+Homepage: http://jamin.sourceforge.net/
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/git/pkg-multimedia/jamin.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-multimedia/jamin.git
+Build-Depends: cdbs, dh-autoreconf, debhelper, dh-buildinfo, docbook-to-man, fftw3-dev, indent, intltool, libclutter-gtk-1.0-dev, ladspa-sdk, libasound2-dev [linux-any], libjack-dev, liblo-dev, libxml2-dev, libxml-parser-perl, swh-plugins
+Package-List:
+ jamin deb sound optional arch=any
+Checksums-Sha1:
+ 6557543c14a305d7c9952a435eabe843fd18846f 679350 jamin_0.98.9~git20170111~199091~repack1.orig.tar.bz2
+ 2e659e97fd4ca60a9a2fdf6ef4fbf2086537e664 12476 jamin_0.98.9~git20170111~199091~repack1-1.debian.tar.xz
+Checksums-Sha256:
+ af18b580eb188a8db18c16ed19e98412c2046087cd30b21ac98798a176eb1638 679350 jamin_0.98.9~git20170111~199091~repack1.orig.tar.bz2
+ b552bc0eb726fe69c334ba3ab1ae5cd614b91ef09dc9d175e5bfdbe1eabf1e8e 12476 jamin_0.98.9~git20170111~199091~repack1-1.debian.tar.xz
+Files:
+ 49ad67e9998dba8d6f23a1f9d1896640 679350 jamin_0.98.9~git20170111~199091~repack1.orig.tar.bz2
+ 347ed100067b537946acdcee83851102 12476 jamin_0.98.9~git20170111~199091~repack1-1.debian.tar.xz
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEdAXnRVdICXNIABVttlAZxH96NvgFAlh2l8sACgkQtlAZxH96
+NvhUaxAAhXVg0ue7vKzGm6TsAER/vOL9Ts8pNygr30DnoRqdGp0PRlB6J3hEq6R3
+8cEnzJjKjjMyXSkMp/1MzaE06hsD7DuymYyegaN7+yifNPRxH9avQzMCD6ZhcthY
+w4NnP887r2hQ1dWwJWCeFEr2dKHhFTiFrECPlYFnBXtY1ynl9FGE0cFsgpiL5EC1
+5UlitK7ol1dPTEYhANNbYBRYytGZfIQ7Eh9qgQjbRRyBfCt55B85jhTX7fOq6oOi
+StPuXjRePmkP4bcSGtYLzSpbYSYoHpxly7cJUtvbz/4ZalEPSrGe+9RS4JMPEUdk
++ID35s4WBTsbW4xY/gEeK3juboHb5u7FD8VpanbC9oswRku92NaVDc/qQK+uUZFS
+xlXkUzp41LlLLWVEv4m3xHbc/SoOvjPYSFegrugR/irKRSAapPpXVPp0nU6LpSgo
+AC3m9B0ItGnMaE9PrEcw2JqqsCNhFQDtTpYKfu64tx0ANr8DGHnz0hzv8rSg0kIX
+MbLJLmXveZgAtfYQQ1WMaw2teOA0jWLDVhtPNreGHxF+D/MTbZCtz8qg/XMjnVog
+2vNAoFVOxoV3hD0+oviPgCDQ9g49vBYw1y8+GFe/GA2tNuVqUGPI8OOOMG+YvxtL
+VeztgROrxPNl75VYJ2RxpfM7yA2ORxwZ6sumbFskIkOY7h2mAYA=
+=CCLd
+-----END PGP SIGNATURE-----

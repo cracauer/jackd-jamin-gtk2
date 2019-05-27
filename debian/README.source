@@ -1,0 +1,36 @@
+jamin for Debian
+================
+
+The upstream sources (taken from git) contained a number of build-artifacts,
+which have been stripped away for the Debian source package:
+ - NEWS
+ - src/jamin
+ - src/libnopt.a
+ - **/Makefile
+ - **/Makefile.in
+ - aclocal.m4
+ - autom4te.cache/
+ - compile
+ - config.guess
+ - config.h
+ - config.log
+ - config.status
+ - config.sub
+ - configure
+ - depcomp
+ - install-sh
+ - libtool
+ - ltmain.sh
+ - missing
+ - mkinstalldirs
+ - stamp-h1
+ - controller/.deps/
+ - intltool-*.in
+ - data/jamin.desktop
+ - data/jamin.xml
+ - examples/jamin_ui
+ - examples/marble_jamin_ui
+ - po/POTFILES
+ - po/*.gmo
+ - po/stamp-it
+ - test/files/CVS/

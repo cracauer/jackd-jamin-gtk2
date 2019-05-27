@@ -1,0 +1,47 @@
+Source: jamin
+Section: sound
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Jonas Smedegaard <dr@jones.dk>,
+Build-Depends: @cdbs@,
+ docbook-to-man,
+ fftw3-dev,
+ indent,
+ intltool,
+ libclutter-gtk-1.0-dev,
+ ladspa-sdk,
+ libasound2-dev [linux-any],
+ libjack-dev,
+ liblo-dev,
+ libxml2-dev,
+ libxml-parser-perl,
+ swh-plugins,
+Homepage: http://jamin.sourceforge.net/
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-multimedia/jamin.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-multimedia/jamin.git
+
+Package: jamin
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ swh-plugins,
+ jackd,
+Description: Audio mastering from a mixed down multitrack source with JACK
+ JAM is a tool for producing audio masters from a mixed down multitrack source.
+ It runs in the JACK Audio Connection Kit, and uses LADSPA for its backend DSP
+ work, specifically the swh plugins created by Steve Harris, JAM's main author.
+ .
+ Features:
+  * Linear filters
+  * JACK I/O
+  * 30 band graphic EQ
+  * 1023 band hand drawn EQ with parametric controls
+  * Spectrum analyser
+  * 3 band peak compressor
+  * Lookahead brickwall limiter
+  * Multiband stereo processing
+  * Presets and scenes
+  * Loudness maximiser

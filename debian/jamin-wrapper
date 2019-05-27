@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "x$1" != "x" ]; then
+  jamin -f "$1"
+else
+  jamin
+fi

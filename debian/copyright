@@ -1,0 +1,152 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: JAMin
+Upstream-Contact: Steve Harris <steve@plugin.org.uk>
+Source: git://git.code.sf.net/p/jamin/code
+
+Files: *
+Copyright: 2003-2004,2006, Steve Harris
+License: GPL-2+
+
+Files: ./src/io.c
+	./src/io.h
+	./src/jackstatus.h
+	./src/resource.c
+	./src/resource.h
+	./src/status-ui.c
+	./src/transport.c
+	./src/transport.h
+Copyright: 2003-2004, Jack O'Quin
+License: GPL-2+
+
+Files: ./src/hdeq.c
+	./src/hdeq.h
+	./src/help.c
+	./src/help.h
+	./src/preferences.c
+	./src/preferences.h
+	./src/scenes.c
+	./src/spectrum.h
+Copyright: 2003-2004, Jan C. Depner
+License: GPL-2+
+
+Files: ./src/callbacks.c
+	./src/debug.h
+	./src/main.h
+	./src/process.c
+Copyright: 2003, Jack O'Quin
+ 2003, Jan C. Depner
+ 2003, Steve Harris <steve@plugin.org.uk>
+License: GPL-2+
+
+Files: ./src/geq.h
+	./src/scenes.h
+	./src/spectrum.c
+Copyright: 2003, Jan C. Depner
+	2003, Steve Harris <steve@plugin.org.uk>
+License: GPL-2+
+
+Files: ./src/io-menu.h
+	./src/status-ui.h
+Copyright: 2003, Jack O'Quin
+	2003, Jan C. Depner
+License: GPL-2+
+
+Files: ./src/ringbuffer.c
+	./src/ringbuffer.h
+Copyright: 2000, Paul Davis
+	2003, Rohan Drape
+License: LGPL-2.1+
+
+Files: ./po/fr.po
+Copyright: 2007, Raphaël Doursenaud <rdoursenaud@free.fr>
+	2008, Emmanuel Saracco <esaracco@free.fr>
+License: GPL-2+
+
+Files: ./po/cz.po
+Copyright: 2011, Pavel Fric <pavelfric@seznam.cz>
+License: GPL-2+
+
+Files: ./po/ru.po
+Copyright: 2005, Alexandre Prokoudine <avp@lrn.ru>
+License: GPL-2+
+
+Files: ./src/main.c
+	./jam-ui.glade
+	./src/callbacks_help.h
+	./src/interface.c
+Copyright: 2003-2005, Jan C. Depner
+	2003-2005, Jack O'Quin
+	2003-2005, Patrick Shirkey
+	2003-2005, Ron Parker
+	2003-2005, Steve Harris <steve@plugin.org.uk>
+License: GPL-2+
+
+Files: ./src/process.h
+Copyright: 2003, Jack O'Quin
+	2003, Steve Harris <steve@plugin.org.uk>
+License: GPL-2+
+
+Files: ./src/io-menu.c
+Copyright: 2003, Jack O'Quin
+	2003, Patrick Shirkey
+License: GPL-2+
+
+Files: ./src/spline.c
+Copyright: *No copyright*
+License: other-PD
+
+Files: ./INSTALL
+Copyright: 1994-1996, 1999-2002, Free Software
+License: other-GAP-INSTALL
+
+Files: ./debian/*
+Copyright: 2003-2005, Robert Jordens <rjo@gmx.de>
+	2010, Jonas Smedegaard <dr@jones.dk>
+        2010-2011, Alessio Treglia <alessio@debian.org>
+        2017, IOhannes m zmölnig <umlaeute@debian.org>
+License: GPL-2+
+
+License: GPL-2+
+ This file is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ (GPL) version 2 can be found an 2/usr/share/common-licenses/GPL-2".
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+License: LGPL-2.1+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation; either version 2.1 of
+ the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License (LGPL) version 2.1 can be found at
+ "/usr/share/common-licenses/LGPL-2.1".
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this program.  If not, see
+ <http://www.gnu.org/licenses/>.
+
+License: other-GAP-INSTALL
+ This file is free documentation; the Free Software Foundation gives
+ unlimited permission to copy, distribute and modify it.
+
+License: other-PD
+ This source is in the public domain.  It is distributed in the hope that
+ it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
