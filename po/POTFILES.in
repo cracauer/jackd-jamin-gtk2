@@ -1,0 +1,15 @@
+# List of source files containing translatable strings.
+
+data/jamin.desktop.in
+data/jamin.xml.in
+src/callbacks.c
+src/callbacks_help.h
+src/geq.c
+src/hdeq.c
+src/interface.c
+src/intrim.c
+src/io-menu.c
+src/io.c
+src/main.c
+src/status-ui.c
+src/support.c

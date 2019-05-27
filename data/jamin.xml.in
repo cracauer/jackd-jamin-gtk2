@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-jamin">
+  <_comment>JAMin session file</_comment>
+  <glob pattern="*.jam"/>
+  </mime-type>
+</mime-info>

@@ -1,0 +1,152 @@
+dnl Process this file with autoconf to produce a configure script.
+
+AC_INIT(configure.in)
+AM_INIT_AUTOMAKE(jamin, 0.98.9)
+AM_CONFIG_HEADER(config.h)
+AM_MAINTAINER_MODE
+
+
+#  AC_PROG_CC sets CFLAGS to -g -O2 if possible.  Save this string,
+#  as `CFLAGS_OPT' for use as optimization flags.  But, don't
+#  mindlessly use it for every compile.
+USER_CFLAGS=$CFLAGS
+AC_ISC_POSIX
+AC_PROG_CC
+AM_PROG_CC_STDC
+AM_PROG_CC_C_O
+AC_HEADER_STDC
+AC_C_CONST
+AC_C_VOLATILE
+AC_C_INLINE
+AC_ENABLE_STATIC(no)
+AC_ENABLE_SHARED(yes)
+AC_LIBTOOL_DLOPEN
+AC_PROG_LIBTOOL
+ALL_LINGUAS="ru fr cz"
+AC_PROG_INTLTOOL
+
+CFLAGS_OPT=$CFLAGS
+CFLAGS=$USER_CFLAGS
+AC_SUBST(CFLAGS_OPT)
+
+AC_ARG_ENABLE(double-fft, [  --enable-double-fft Enable double precision fourier transform code - not recommended])
+
+# Checks for libraries.
+AC_CHECK_LIB([pthread], [pthread_self],,
+	[AC_MSG_ERROR(You need libpthread installed)])
+AC_CHECK_FUNC(sched_getscheduler,
+	[AC_DEFINE(HAVE_POSIX_SCHED,,[POSIX scheduler support])])
+
+PKG_CHECK_MODULES(JACK, jack >= 0.80.0)
+AC_CHECK_LIB(jack,jack_client_create_thread,
+	[AC_DEFINE(HAVE_JACK_CLIENT_CREATE_THREAD,,[newer JACK thread creation])]
+	[AC_DEFINE(HAVE_JACK_CREATE_THREAD,,[JACK thread creation support])])
+AC_CHECK_LIB(jack,jack_create_thread,
+	[AC_DEFINE(HAVE_JACK_CREATE_THREAD,,[older JACK thread creation support])])
+AC_CHECK_LIB(jack,jack_ringbuffer_create,
+	[AC_DEFINE(HAVE_JACK_RINGBUFFER,,[JACK has ringbuffer support])])
+AC_CHECK_LIB(jack,jack_client_name_size,
+	[AC_DEFINE(HAVE_JACK_CLIENT_NAME_SIZE,,
+		[JACK returns client name size])])
+AC_CHECK_LIB(jack,jack_client_open,
+	[AC_DEFINE(HAVE_JACK_CLIENT_OPEN,,
+		[jack_client_open is available])])
+
+[if test "${enable_double_fft+set}" = set; then]
+	PKG_CHECK_MODULES(FFTW, fftw3 >= 3.0, AC_DEFINE(FFTW_TYPE, [double], [Datatype used by installed FFTW libraries]), [AC_MSG_ERROR([Didn't find any double precision FFTW3 libraries])])
+[else]
+	PKG_CHECK_MODULES(FFTW, fftw3f >= 3.0, AC_DEFINE(FFTW_TYPE, [float], [Datatype used by installed FFTW libraries]), [AC_MSG_ERROR([Didn't find any float FFTW3 libraries.
+configure: error: Make sure you built FFTW with --enable-float.
+configure: error: Double precision /can/ be used (--enable-double-fft),
+configure: error: but this package will not run in realtime on many 2003
+configure: error: era machines])])
+[fi]
+
+PKG_CHECK_MODULES(XML, libxml-2.0 >= 2.0)
+
+# build OSC interface if enabled and liblo available
+AC_ARG_ENABLE(osc,
+	AC_HELP_STRING([--disable-osc],
+		       [do not include Open Sound Control interface]),
+	[], enable_osc=yes)
+if test "$enable_osc" = yes; then
+	USE_OSC="yes"
+fi
+if test "x$USE_OSC" = "xyes"; then
+    PKG_CHECK_MODULES(OSC, liblo >= 0.5,
+	[AC_DEFINE(HAVE_OSC, [yes], [Whether liblo OSC library is available])
+	 [OSC_PROGS="jamin-scene"]],
+	[AC_MSG_WARN([liblo not available, OSC support will not be built])
+	 [USE_OSC="no"]])
+fi
+AC_SUBST(OSC_PROGS)
+AM_CONDITIONAL(USE_OSC, test "x$USE_OSC" = "xyes")
+
+# On Mac OS X the float functions for <math.h> are in -lmx
+AC_CHECK_LIB([m], [sqrt],, [AC_MSG_ERROR(Can't find libm)])
+AC_CHECK_LIB(m, log10f,, [
+	AC_CHECK_LIB(mx, log10f,,
+		[AC_MSG_ERROR([Can't find float libm])])])
+
+pkg_modules="gtk+-3.0 >= 3.3.10"
+#pkg_modules="gtk+-3.0 >= 3.3.10 clutter-1.0 >= 1.12.0 clutter-gtk-1.0 >= 1.2.0"
+PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+AC_SUBST(PACKAGE_CFLAGS)
+AC_SUBST(PACKAGE_LIBS)
+
+GETTEXT_PACKAGE=jamin
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE")
+AM_GLIB_GNU_GETTEXT
+
+libnn=lib
+case "${host_os}" in
+  linux*)
+  case "${host_cpu}" in
+    x86_64|mips64|ppc64|sparc64|s390x)
+    libnn=lib64
+  esac
+esac
+
+if test "${libdir}" = '${exec_prefix}/lib'; then
+  libdir='${exec_prefix}/'${libnn}
+fi
+
+JAMIN_LIBS="$FFTW_LIBS $XML_LIBS $JACK_LIBS $OSC_LIBS"
+AC_SUBST(JAMIN_LIBS)
+JAMIN_CFLAGS="-g $FFTW_CFLAGS $JACK_CFAGS $XML_CFLAGS $OSC_CFLAGS"
+AC_SUBST(JAMIN_CFLAGS)
+dnl Use -Wall if we have gcc.
+changequote(,)dnl
+if test "x$GCC" = "xyes"; then
+  case " $JAMIN_CFLAGS " in
+  *[\ \	]-Wall[\ \	]*) ;;
+  *) JAMIN_CFLAGS="$JAMIN_CFLAGS -Wall" ;;
+  esac
+fi
+changequote([,])dnl
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([stdlib.h string.h unistd.h])
+
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_C_INLINE
+
+# Checks for library functions.
+AC_CHECK_FUNCS([atexit])
+
+AC_OUTPUT([
+Makefile
+data/Makefile
+po/Makefile.in
+src/Makefile
+src/jamin.1
+pixmaps/Makefile
+examples/Makefile
+controller/Makefile
+examples/jamin_ui
+examples/marble_jamin_ui
+])

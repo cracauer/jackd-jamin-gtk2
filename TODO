@@ -1,0 +1,72 @@
+=======================================================================
+*** TODO - A one file mini-bugzilla for JAMIN developers            ***
+=======================================================================
+
+(Modeled on the JACK TODO file, with thanks to Kai Vehmanen.)
+
+
+TO BE DECIDED (owner)
+
+
+TODO (owner)
+
+- fix limiter bypass (Steve)
+- add OSC functionality (Steve)
+- commit mastering documentation to CVS (Ron)
+- set JACK port latencies correctly (Jack, Steve)
+- error and debug message rationalization (???)
+	IF_DEBUG(), -v option, error dialogue
+- allow jamin to run (disconnected) without JACK server (???)
+	connect (or reconnect) at any time
+- i18n cleanup (???)
+- test automation (???)
+- scene automation -- MIDI? (???)
+- backend / UI seperation (everyone)
+
+
+TO THINK ABOUT
+
+- making the DocBook/XML documentation compatible with Yelp (Alexandre)
+- add test script directory (Jack)
+
+
+CLOSED (date)
+
+- Morph settings on scene changes (2003/06/30)
+- Make save and load work with multiple scenes (2003/06/30)
+- remove use of <asm/atomic.h> (2003/06/03)
+- capabilites support for DSP thread (2003/06/15)
+- AUTHORS file (2003/06/16)
+- add JACK transport position tracking (2003/06/17)
+- JACK transport master control (2003/06/25)
+- UI for JACK transport master (2003/06/25)
+- README file (2003/06/27)
+- UI for reporting JACK status, including transport state (2003/07/05)
+- Change all uses of JAM to JAMin (2003/11/19)
+- copyright headers in source code file (2003/11/19)
+- move option parsing from io.c to main.c (2003/11/19)
+- option to start up with no ports connected (2003/11/19)
+- option for session name (2003/11/19)
+- man page (2003/11/19)
+- finish hotkeys for most used stuff: volume/pan, tabs, transport (2003/11/19)
+- decide to remove 30 band EQ? (2003/11/19)
+- fix xover points and undo interaction (2003/11/19)
+- make output gain work (2003/12/02)
+- make FFTW double warning scarier (2003/12/02)
+- make "boost" less awful (2003/12/03)
+- make JAMin survive denormals and so on (2003/12/09)
+- fix crash on startup using gcc-2.95.4 (2003/12/13)
+- Correct for limiter latency in bypass (2003/12/??)
+- XML parser error/warning reporting (2004/01/10
+- finish context sensitive help verbiage (2004/01/18)
+- options pulldown menu for spectrum, crossfade, EQ options (2004/01/19)
+- remove EQ options window and move functionality to options pulldown (2004/01/19)
+- color editor for GUI highlights/text colors (2004/01/19)
+- bypass / solo for bands (2004/02/21)
+- bypass for components (2004/02/21)
+- correct high and low pass slope in parametric controls (2004/03/01)
+- update web pages to show Options menu (2004/03/??)
+- add all modifiable colors to preferences menu (2004/04/26)
+- save options to startup file (2004/04/28)
+- fixed help in preferences and options dialog (2004/04/29)
+- save compressor control ganging, min/max EQ values, other stuff with state (??)

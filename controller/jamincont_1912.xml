@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE ladspa SYSTEM "ladspa-swh.dtd">
+<?xml-stylesheet href="ladspa.css" type="text/css"?>
+
+<ladspa>
+  <global>
+    <meta name="maker" value="Steve Harris &lt;steve@plugin.org.uk&gt;"/>
+    <meta name="copyright" value="GPL"/>
+    <meta name="properties" value="HARD_RT_CAPABLE"/>
+    <code><![CDATA[
+      #include <unistd.h>
+      #include <stdio.h>
+      #include <pthread.h>
+      #include <lo/lo.h>
+
+      #include "../src/constants.h"
+
+      #define EXITV -999
+
+      //#define DEBUG 1
+
+      static int scene = -1;
+      static int thread_created = 0;
+      static pthread_t thread;
+
+      static void *controller_thread(void *p)
+      {
+	int last_scene = -1;
+      	lo_address address = lo_address_new(NULL, OSC_PORT);
+
+	printf("THREAD\n");
+
+	while (scene != EXITV) {
+#ifdef DEBUG
+printf(". %d\n", scene);
+#endif
+	  if (last_scene != scene) {
+	    last_scene = scene;
+	    if (last_scene > 0 && last_scene <= NUM_SCENES) {
+	      lo_send(address, OSC_PATH, "i", last_scene);
+	    }
+	  }
+#ifdef DEBUG
+	  usleep(1000000);
+#else
+	  usleep(10000);
+#endif
+	}
+
+	lo_address_free(address);
+#ifdef DEBUG
+printf("DONE\n");
+#endif
+
+	return NULL;
+      }
+    ]]></code>
+  </global>
+
+  <plugin label="jaminController" id="1912" class="UtilityPlugin">
+    <name>JAMin Controller</name>
+
+    <callback event="instantiate"><![CDATA[
+#ifdef DEBUG
+printf("instantiate called\n");
+#endif
+      scene = -1;
+      if (!thread_created) {
+	thread_created = 1;
+	pthread_create(&thread, NULL, controller_thread, NULL);
+      }
+    ]]></callback>
+
+    <callback event="activate"><![CDATA[
+#ifdef DEBUG
+printf("activate called\n");
+#endif
+      scene = -1;
+    ]]></callback>
+
+    <callback event="run"><![CDATA[
+      unsigned long pos;
+
+      scene = (int)(scene_cont + 0.5f);
+
+      if (input != output) {
+        for (pos = 0; pos < sample_count; pos++) {
+          buffer_write(output[pos], input[pos]);
+        }
+      }
+    ]]></callback>
+
+    <callback event="cleanup"><![CDATA[
+#ifdef DEBUG
+printf("cleanup called\n");
+#endif
+      scene = EXITV;
+      thread_created = 0;
+      //pthread_cancel(thread);
+    ]]></callback>
+
+    <port label="scene_cont" dir="input" type="control" hint="default_1,integer">
+      <name>Scene no.</name>
+      <p>Changes the JAMin scene number</p>
+      <range min="1" max="NUM_SCENES"/>
+    </port>
+
+    <port label="input" dir="input" type="audio">
+      <name>Input</name>
+    </port>
+
+    <port label="output" dir="output" type="audio">
+      <name>Output</name>
+    </port>
+  </plugin>
+</ladspa>

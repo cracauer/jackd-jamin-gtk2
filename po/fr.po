@@ -1,0 +1,1686 @@
+# French translation of JAMin.
+# Copyright (C) 2007-2008
+# Raphaël Doursenaud <rdoursenaud@free.fr>, 2007
+# Emmanuel Saracco <esaracco@free.fr>, 2008
+# This file is distributed under the same license as the JAMin package.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: JAMin 0.97.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-03 20:57+0100\n"
+"PO-Revision-Date: 2008-02-19 18:00+0100\n"
+"Last-Translator: Emmanuel Saracco <esaracco@free.fr>\n"
+"Language-Team: French <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: ../data/jamin.desktop.in.h:1
+msgid "JACK Audio Mastering interface"
+msgstr "Interface de masterisation JACK Audio"
+
+#: ../data/jamin.desktop.in.h:2 ../src/interface.c:548
+msgid "JAMin"
+msgstr "JAMin"
+
+#: ../data/jamin.xml.in.h:1
+msgid "JAMin session file"
+msgstr "Fichier de session JAMin"
+
+#: ../src/callbacks.c:303
+msgid "Pre EQ spectrum         "
+msgstr "Spectre pré-égalisation "
+
+#: ../src/callbacks.c:306
+msgid "Post EQ spectrum        "
+msgstr "Spectre post-égalisation "
+
+#: ../src/callbacks.c:309
+msgid "Post compressor spectrum"
+msgstr "Spectre post-compresseur "
+
+#: ../src/callbacks.c:312
+msgid "Output spectrum         "
+msgstr "Spectre en sortie       "
+
+#: ../src/callbacks.c:1303 ../src/callbacks.c:1329 ../src/callbacks.c:1367
+#: ../src/callbacks.c:1396
+msgid "Select a session file"
+msgstr "Sélectionner un fichier de session"
+
+#: ../src/callbacks_help.h:20
+msgid ""
+"    JAMin is the JACK Audio Mastering interface.\n"
+"\n"
+"    Web site: <http://jamin.sourceforge.net>\n"
+"\n"
+"    JAMin is designed to perform professional audio mastering of any number "
+"of input streams.  It consists of a number of tools to do this: a 1024 band "
+"hand drawn EQ with modifiable parametric controls, a 31 band graphic EQ, 3 "
+"band compressor, 3 band stereo width control, lookahead limiter, boost, and "
+"a number of other features.\n"
+"\n"
+"    Steve Harris is the JAMin principle author and team leader.\n"
+"\n"
+"    SourceForge CVS developers, in alphabetical order:\n"
+"\n"
+"    Jan Depner\n"
+"    Steve Harris\n"
+"    Jack O'Quin\n"
+"    Ron Parker\n"
+"    Patrick Shirkey\n"
+"\n"
+"    JAMin is released under the GNU General Public License and is copyright "
+"(c) 2003 J. Depner, S. Harris, J. O'Quin, R. Parker, and P. Shirkey. \n"
+"    This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"    This program is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"    You should have received a copy of the GNU General Public License along "
+"with this program; if not, write to the Free Software Foundation, Inc., 675 "
+"Mass Ave, Cambridge, MA 02139, USA.\n"
+msgstr ""
+"    JAMin est l'interface de Mastering Audio de JACK.\n"
+"\n"
+"    Site Web: <http://jamin.sourceforge.net>\n"
+"\n"
+"    JAMin est conçu pour réaliser un mastering audio professionnel de "
+"n'importe quel nombre de canaux d'entrée.Pour ce faire, il est composé d'un "
+"certain nombre d'outils: un égaliseur 1024 bandes dessinable à la main avec "
+"contrôles paramétriques modifiables; un égaliseur graphique 31 bandes, un "
+"compresseur 3 bandes, un contrôleur de stéréophonie 3 bandes, un limiteur "
+"\"lookahead\", un \"boost\" et un certain nombre d'autres fonctionnalités.\n"
+"\n"
+"    Steve Harris est l'auteur principal et le chef d'équipe de JAMin.\n"
+"\n"
+"    Développeurs CVS SourceForge, par ordre alphabétique:\n"
+"\n"
+"    Jan Depner\n"
+"    Steve Harris\n"
+"    Jack O'Quin\n"
+"    Ron Parker\n"
+"    Patrick Shirkey\n"
+"\n"
+"    JAMin is released under the GNU General Public License and is copyright "
+"(c) 2003 J. Depner, S. Harris, J. O'Quin, R. Parker, and P. Shirkey. \n"
+"    This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"    This program is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"    You should have received a copy of the GNU General Public License along "
+"with this program; if not, write to the Free Software Foundation, Inc., 675 "
+"Mass Ave, Cambridge, MA 02139, USA.\n"
+
+#: ../src/callbacks_help.h:51
+msgid ""
+"    JAMin would not be functional without many other open source packages "
+"and we thought that it would only be right to list them here:\n"
+"\n"
+"    JACK - JACK Audio Connection Kit\n"
+"    http://jackit.sourceforge.net\n"
+"\n"
+"    SWH plugins - Steve Harris' LADSPA plugins\n"
+"    http://plugin.org.uk\n"
+"\n"
+"    LADSPA - Linux Audio Developer's Simple Plugin API\n"
+"    http://www.ladspa.org\n"
+"\n"
+"    FFTW - Fastest Fourier Transform in the West\n"
+"    http://www.fftw.org\n"
+"\n"
+"    libsndfile - Erik de Castro Lopo's sound file I/O\n"
+"    http://www.zip.com.au/~erikd/libsndfile\n"
+"\n"
+"    GTK - The GIMP Toolkit\n"
+"    http://www.gtk.org\n"
+"\n"
+"    ALSA - Advanced Linux Sound Architecture\n"
+"    http://www.alsa-project.org\n"
+"\n"
+"Many thanks to all of the authors of these packages!\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:72
+msgid ""
+"    The File menu has the standard options available.  Save and Save As "
+"allow you to save the scenes and settings for a session to a .jam file.  By "
+"default these are saved in the $HOME/.jamin directory but may be saved "
+"anywhere.\n"
+"    The Edit menu has undo and redo options for changes to the settings.  It "
+"also has the Preferences entry to bring up the Preferences dialog.  The "
+"Preferences dialog allows you to change the default values for many of "
+"JAMin's settings.  More detailed help is available in the Preferences "
+"dialog.\n"
+"    The Ports menu allows you to set the input and output ports for JAMin.\n"
+"\n"
+"    For help on the rest of the GUI, context specific help can be obtained "
+"by moving the mouse pointer into one of the tool areas (compressor, EQ, "
+"limiter, input, etc) and pressing <Shift><F1>.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:90
+msgid ""
+"    This dialog allows you to change many of JAMin's default settings.\n"
+"\n"
+"    Graphic EQ : Set the minimum and maximum levels for the hand-drawn EQ "
+"(HDEQ) and the graphic EQ (GEQ).\n"
+"\n"
+"    Crossfade : Set the length of the crossfade time when changing between "
+"scenes or using the undo/redo functions.\n"
+"\n"
+"    Warning Level : Set the input and output meter warning level.\n"
+"\n"
+"    Spectrum : Set the source for the spectrum displays in the HDEQ and the "
+"Spectrum tab.  Also, set the spectrum update frequency for both of these "
+"tabs.\n"
+"\n"
+"    Crossover Type : Choose the type of crossover.  Fast Fourier Transform "
+"(FFT) or Infinite Impulse Response (IIR).  IIR should only be used for "
+"testing as your results will be substantially inferior to the FFT "
+"crossover.\n"
+"\n"
+"    RMS Sample Size : Set the time slice size to be used for the RMS meter "
+"displays.  The number of samples will change as you modify the time.\n"
+"\n"
+"    Band Delays : Set delays for the low and mid bands.  The maximum delay "
+"for the low band is 2 milliseconds and the maximum delay for the mid band is "
+"0.5 milliseconds.  These delays are used for compensating for for the "
+"different low and mid frequency drivers in a speaker system.  This is "
+"sometimes nice for mastering.  The delays will not bgo into effect unless "
+"the Delay buttons under the low and mid band compressor control areas are "
+"selected.\n"
+"\n"
+"    Colors : Set the colors for most of JAMin's displays.  These colors are "
+"saved in the file $HOME/.jamin/jamin-defaults.  This is done whenever you "
+"exit from JAMin.  You can actually edit this file and change the colors by "
+"hand.  They are just RGB values in the 0-65535 range but it's much easier to "
+"use the GUI ;-).\n"
+"\n"
+"    Limiter : Select either Steve Harris' fast-lookahead-limiter plugin or "
+"Sampo Savolainen's foo-limiter.  Note that there may be artifacts if you "
+"push the foo-limiter too hard.\n"
+"\n"
+"    Output Meter Numeric Display : Set whether the output meter numeric "
+"displays for output and RMS display peak values or the current level "
+"values.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:124
+msgid ""
+"    The hand drawn EQ (HDEQ) allows the user to draw the EQ curve using the "
+"mouse.  The curve is then splined to fill 1024 EQ bands.  There are a number "
+"of other options available in the HDEQ.  There are user defined notches that "
+"act as parametric EQ controls.  There are also crossover controls that will "
+"allow the user to change the compressor crossover points.  The following is "
+"a quick guide to using the HDEQ:\n"
+"\n"
+"    In the background window - left click and release to begin drawing the "
+"curve.  Left click again to end the curve.  You can define any portion of "
+"the curve, you don 't have to define the entire curve.  Drawing can be done "
+"from left to right or right to left.  If you try to reverse direction while "
+"drawing, the data in the reverse direction will be ignored.  You can discard "
+"the curve that you are drawing by clicking the middle button or by clicking "
+"the right button and selecting Cancel from the popup menu that appears.  "
+"Clicking the right mouse button in the HDEQ will pop up a menu with four "
+"entries:\n"
+"\n"
+"    Reset HDEQ curve\n"
+"    Release parametric EQ controls\n"
+"    Help\n"
+"    Cancel\n"
+"\n"
+"The first entry will reset the entire EQ curve to its original (flat) "
+"setting.  The second entry will leave the EQ curve as is but will release "
+"the three normal (non-shelving) parametric EQ controls to be used again "
+"(this effectively gives you an unlimited number of parametric EQ controls).  "
+"The third entry (Help) will display this help information.  The fourth entry "
+"(Cancel) will discard any hand drawn EQ line that you are in the process of "
+"drawing.  If you are not drawing a line it does nothing.\n"
+"\n"
+"    Over the crossover bar handles - left click and hold to drag the "
+"crossover bars.\n"
+"\n"
+"    Over the notch handles - left click and hold to drag the notch center or "
+"cuttoff frequency and gain.  <Ctrl>-left click will reset the notch to 0.  "
+"If you hold the shift key while adjusting the notch handle it will only move "
+"in the Y (gain) direction.\n"
+"\n"
+"    Over the notch width handle - left click and hold to widen or narrow the "
+"notches, except the high and low cutoff notches which have no width "
+"handles.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:162
+msgid ""
+"    The adjustable crossover is used to split the entire audible range into "
+"three sections.  It applies to the compressors and stereo widths. If the "
+"crossovers are set to 500Hz and 5KHz then the first stereo width control and "
+"compressor works for 25-500Hz, the second for 500Hz-5KHz, and the last for "
+"5KHz-20KHz.  The crossover has no effect on the HDEQ unless one or more "
+"bands are soloed.  The crossover bars that are visible in the HDEQ serve as "
+"a visual reference.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:173
+msgid ""
+"    The graphic EQ (GEQ) can be used to set gain for specific bands of the "
+"audio spectrum.  The center of the band is annotated at the bottom of each "
+"fader.  Setting a fader in the GEQ will override the HDEQ in the immediate "
+"vicinity of the changed fader and cause that curve to be redrawn.  It will "
+"not override the parametric notch settings in the HDEQ.  Clicking the right "
+"mouse button on a GEQ control will reset the value to 0.0.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:183
+msgid ""
+"    The input section allows you to set the input gain to the JAMin system.  "
+"You can also pan the input left or right.  Clicking the right mouse button "
+"on the gain/balance control will reset the value to 0.0/centre.  Clicking "
+"the right mouse button on the meters will reset the peak indicator to the "
+"current level.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:192
+msgid ""
+"    The spectrum display shows the power spectrum of the signal in bands "
+"that correspond to the frequency bands in the 30 band EQ (GEQ). In addition "
+"it displays the maximum value reached for each band as a (by default) blue "
+"line.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:200
+msgid ""
+"    The compressor curves show a graphical representation of the compression "
+"for each compressor band.  The bands are defined by the crossover that can "
+"be set using the crossover faders or the crossover bars in the HDEQ.  The X-"
+"axis shows the input in db while the Y-axis shows the output in db.  The "
+"scale is from -60 to 0 in X and -60 to +30 in Y.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:209
+msgid ""
+"    The compressors allow you to set compression parameters for each "
+"compressor band.  The bands are defined by the crossover that can be set "
+"using the crossover faders or the crossover bars in the HDEQ.  The "
+"parameters are, from left to right:\n"
+"\n"
+"    A - attack in milliseconds\n"
+"    R - release in milliseconds\n"
+"    T - threshold in db\n"
+"    r - compression ratio (N:1)\n"
+"    K - knee (0.0 [hard] to 1.0 [soft])\n"
+"    M - makeup gain in db\n"
+"    Note that the value label for makeup gain is also the automatic makeup "
+"gain button.  Pressing this will cause JAMin to try to approximate the "
+"optimum makeup gain for the other settings.  When pressed you cannot "
+"manually adjust the makeup gain however, adjustments to the threshold or "
+"ratio will cause the makeup gain to change.\n"
+"    A full explanation of the use of these parameters is covered in the user "
+"manual.\n"
+"    Compressor controls can be \"ganged\" by clicking on the control label "
+"in the desired compressor band windows.  When they are ganged moving one "
+"control will move all other ganged controls by the same amount.  To ungang "
+"just click on the label again.  The labels change to the band color to "
+"indicate that they are ganged.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:235
+msgid ""
+"    The stereo width controls define the apparent 'wideness' of the stereo "
+"signal for each of the three bands.  The bands are defined by the crossovers "
+"that can be set using the crossover faders or the crossover bars in the "
+"HDEQ.  More negative values decrease the 'width' while positive values "
+"increase the 'width'.  Clicking the right mouse button on the stereo width "
+"control will reset the value to 0.0.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:245
+msgid ""
+"    The lookahead limiter is a brickwall limiter that will not allow the "
+"output to exceed the set level.  It 'looks ahead' by the specified amount in "
+"order to make a smooth transition as it nears the limit level.  Clicking the "
+"right mouse button on the input or limit control will reset the value to "
+"0.0.  Clicking the right mouse button on the input or limit meters will "
+"reset the peak indicator to the current level.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:255
+msgid ""
+"    The boost control allows the user to add 'tube like' gain to the output "
+"signal.  Use to taste (New England mild to Cajun spicy).  Clicking the right "
+"mouse button on the boost control will reset the value to 0.0.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:262
+msgid ""
+"    The output control allows you to decrease the output level.  The upper "
+"level is 0dB.  Clicking the right mouse button on the output control will "
+"reset the value to 0.0.  Clicking the right mouse button anywhere on the "
+"meters will reset the peak indicators for both the normal and RMS meters to "
+"their current level.  The level indicator boxes above the meters display "
+"either peak value or the current value for the main output meters and the "
+"RMS level meters.  Which value is displayed can be selected in the "
+"Preferences dialog that is accessible from the Edit->Preferences menu "
+"entry.  You can reset the meter peak inicators (and values if that is what "
+"is displayed) by clicking in the individual level indicator boxes.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:276
+msgid ""
+"    The EQ Options dialog allows you to set the minimum and maximum gain "
+"level in dB for both the HDEQ and GEQ.  You can also set the source of the "
+"spectrum for both the HDEQ and spectrum windows.  Spectrum update frequency "
+"can be set here as well.  Up to 10 per second (default) and down to 0 "
+"(disabled).\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:285
+msgid ""
+"    This allows you to set the input to the spectrum computation for both "
+"the Spectrum window and the HDEQ.  The default is Post EQ.  The other "
+"options are Pre EQ, Post compressor, and Output.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:292
+msgid ""
+"    The transport controls give you the usual tape transport type controls.  "
+"These are useful if you are using other JACK enabled applications that honor "
+"the JACK transport control functions (ecamegapedal, Ardour). Note that there "
+"is no stop button (use pause). Some JACK and system status information is "
+"available to the right of the transport buttons.  The fast forward and "
+"reverse buttonsa will move the transport forward or back by five seconds.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:302
+msgid ""
+"    This check box allows you to bypass all of JAMin's processing so that "
+"you can quickly listen to the difference between the processed and "
+"unprocessed sound.  The keyboard accelerator for this button is the 'b' "
+"key.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:309
+msgid ""
+"    Scenes are used to save and recall an entire group of JAMin parameter "
+"settings during a session.  After setting all of the parameters for a "
+"specific section of music (verse, chorus, bridge) or a complete song you can "
+"right click on a scene button, use the menu to 'Set' that scene, then use "
+"the 'Name' entry of the menu to enter a name for that scene (Back Alley "
+"Fugue - verse).  You can recall these settings by left clicking on the scene "
+"button.  A bright green button means that the scene associated with this "
+"button is currently the active scene.  A dull green button signifies that "
+"the scene is loaded but not active.  A red button means that the scene has "
+"no settings loaded.  A bright yellow button means that this scene is active "
+"but the settings have been changed.  If you want to save the settings you "
+"must use the 'Set' entry in the button's right click menu.  You can clear "
+"settings from a button using the right click menu and the 'Clear' entry.\n"
+"\n"
+"    The keyboard accelerators for the scene buttons are the number keys, 1 "
+"through 0 for scenes 1 through 10.  <Shift>-1 through <Shift>-0 will access "
+"scenes 11 through 20.  For example, pressing the 1 key will cause scene 1 to "
+"become active.  Pressing <Shift>-5 will cause scene 15 to become active.  "
+"The ALT modifier can be used to assign settings to a scene button (instead "
+"of using the scene button menus).  Pressing <Alt><Shift>-5 will assign the "
+"current settings to scene button 15 (you may still want to change the "
+"name).  The CTRL modifier can be used to clear a scene button.  Pressing "
+"<Ctrl>-4 will clear scene button 4.  \n"
+"\n"
+"    Note that the keypad keys may be used but only for scenes 1 through 10 "
+"with Num Lock on.  Using the keypad with Num Lock off will access the cursor "
+"keys (which can be used to control some aspects of the GUI).  Using <Shift> "
+"with the keypad with Num Lock on will also access the cursor keys.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:339
+msgid ""
+"    This button allows you to bypass all EQ processing.  It will have no "
+"effect on any of the other controls.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:345
+msgid ""
+"    The solo buttons allow you to listen to selected bands while muting the "
+"other bands.  Selecting two of the solo buttons effectively mutes the "
+"remaining band.  The per band bypass buttons allow you to bypass compression "
+"on the selected bands.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:353
+msgid ""
+"    This button allows you to bypass limiting.  It has no effect on any of "
+"the other controls.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:359
+msgid ""
+"    Changes to the limiter plugin will not go into effect until JAMin is "
+"restarted.\n"
+msgstr ""
+
+#: ../src/callbacks_help.h:365
+msgid ""
+"    Keyboard accelerators are available for many of the functions in JAMin:\n"
+"\n"
+"\tb\t\t\t-\tGlobal bypass\n"
+"\tSpace\t\t-\tToggle play and pause\n"
+"\tHome\t\t-\tPosition transport to beginning\n"
+"\t<\t\t\t-\tMove transport backwards 5 sec.\n"
+"\t>\t\t\t-\tMove transport forwards 5 sec.\n"
+"\t1-0\t\t\t-\tSelect scene 1-10\n"
+"\t<Shift>-1-0\t-\tSelect scene 11-20\n"
+"\t\t\t\t\t<Alt> will set scene, <Ctrl> will clear\n"
+"\t<Ctrl>-o\t\t-\tOpen session file\n"
+"\t<Ctrl>-s\t\t-\tSave to current session file\n"
+"\t<Ctrl>-a\t\t-\tSave session file as new session file\n"
+"\t<Ctrl>-q\t\t-\tQuit\n"
+"\t<Ctrl>-u\t\t-\tUndo\n"
+"\t<Ctrl>-r\t\t-\tRedo\n"
+"\t<Ctrl>-h\t\t-\tGeneral help\n"
+"\tF1\t\t\t-\tSet the notebook tab to HDEQ\n"
+"\tF2\t\t\t-\tSet the notebook tab to 30 band EQ\n"
+"\tF3\t\t\t-\tSet the notebook tab to Spectrum\n"
+"\tF4\t\t\t-\tSet the notebook tab to Compressor \n"
+" \t\t\t\t\tcurves\n"
+"\tF5\t\t\t-\tSet the notebook tab to the EQ \n"
+" \t\t\t\t\tOptions\n"
+"\t<Ctrl>-k\t\t-\tKeyboard accelerator help (this \n"
+" \t\t\t\t\tscreen)\n"
+"\t<Ctrl>-j\t\t-\tAbout JAMin\n"
+msgstr ""
+
+#: ../src/geq.c:124 ../src/geq.c:156
+#, c-format
+msgid "Splined length %d does not match BINS / 2 - 1 (%d)"
+msgstr ""
+
+#: ../src/geq.c:241
+#, c-format
+msgid "jam error: Adjustment from out-of-range band %d requested\n"
+msgstr ""
+
+#: ../src/hdeq.c:389 ../src/hdeq.c:498
+#, c-format
+msgid "<b>Mid : %d - %d</b>"
+msgstr "<b>Médiums : %d - %d</b>"
+
+#: ../src/hdeq.c:396
+#, c-format
+msgid "<b>Low : %d - %d</b>"
+msgstr "<b>Graves : %d - %d</b>"
+
+#: ../src/hdeq.c:504
+#, c-format
+msgid "<b>High : %d - %d</b>"
+msgstr "<b>Aigües : %d - %d</b>"
+
+#: ../src/hdeq.c:727
+msgid "Allocating x in set_EQ"
+msgstr ""
+
+#: ../src/hdeq.c:1429
+#, c-format
+msgid "%dHz , EQ : %.1fdb , Spectrum : %ddb"
+msgstr "%dHz , Correction : %.1fdb , Spectre : %ddb"
+
+#: ../src/hdeq.c:1477 ../src/hdeq.c:2018
+msgid "Allocating EQ_yinput in callbacks.c"
+msgstr ""
+
+#: ../src/hdeq.c:1795
+#, c-format
+msgid "%ddb , %dHz - %dHz"
+msgstr "%ddb , %dHz - %dHz"
+
+#: ../src/hdeq.c:2135 ../src/hdeq.c:2155
+msgid "Allocating y in callbacks.c"
+msgstr ""
+
+#: ../src/interface.c:567
+msgid "_File"
+msgstr "_Fichier"
+
+#: ../src/interface.c:591
+msgid "Save _As"
+msgstr "Enregistrer _sous..."
+
+#: ../src/interface.c:615
+msgid "_Edit"
+msgstr "_Edition"
+
+#: ../src/interface.c:624
+msgid "_Undo"
+msgstr "_Défaire"
+
+#: ../src/interface.c:637
+msgid "_Redo"
+msgstr "_Refaire"
+
+#: ../src/interface.c:655
+msgid "_Ports"
+msgstr "_Ports"
+
+#: ../src/interface.c:660
+msgid "_Help"
+msgstr "_Aide"
+
+#: ../src/interface.c:669
+msgid "_General"
+msgstr "_Générale"
+
+#: ../src/interface.c:682
+msgid "_Keys"
+msgstr "_Touches"
+
+#: ../src/interface.c:701
+msgid "About _JAMin"
+msgstr "À propos de _JAMin"
+
+#: ../src/interface.c:714
+msgid "About Prerequisites"
+msgstr "À propos des dépendances"
+
+#: ../src/interface.c:751
+msgid "rewind transport"
+msgstr "rembobiner"
+
+#: ../src/interface.c:764
+msgid "backward transport"
+msgstr "déplacer en arrière"
+
+#: ../src/interface.c:777
+msgid "play transport"
+msgstr "lecture"
+
+#: ../src/interface.c:790
+msgid "pause transport"
+msgstr "pause"
+
+#: ../src/interface.c:803
+msgid "forward transport"
+msgstr "déplacer en avant"
+
+#: ../src/interface.c:815
+msgid "HH:MM:SS:xx"
+msgstr "HH:MM:SS:xx"
+
+#: ../src/interface.c:827
+msgid "Stopped | some CPU | some frames | 96000 Hz | Focus - something"
+msgstr "Arrêté | some CPU | some frames | 96000 Hz | Focus - something"
+
+#: ../src/interface.c:849
+msgid "<b>Scenes</b>"
+msgstr "<b>Scènes</b>"
+
+#: ../src/interface.c:865 ../src/interface.c:876 ../src/interface.c:887
+#: ../src/interface.c:898
+msgid "Don't change this pixmap!!!"
+msgstr ""
+
+#: ../src/interface.c:909 ../src/interface.c:920 ../src/interface.c:931
+#: ../src/interface.c:942 ../src/interface.c:953 ../src/interface.c:964
+#: ../src/interface.c:975 ../src/interface.c:986 ../src/interface.c:997
+#: ../src/interface.c:1008 ../src/interface.c:1019 ../src/interface.c:1030
+#: ../src/interface.c:1041 ../src/interface.c:1052 ../src/interface.c:1063
+#: ../src/interface.c:1074
+msgid "Right click for menu"
+msgstr "Clic droit pour le menu"
+
+#: ../src/interface.c:1137
+msgid "Input Gain"
+msgstr "Gain d'entrée"
+
+#: ../src/interface.c:1179
+msgid "pan_label"
+msgstr ""
+
+#: ../src/interface.c:1188
+msgid "Input Balance"
+msgstr "Panoramique d'entrée"
+
+#: ../src/interface.c:1197
+msgid "<b>Input</b>"
+msgstr "<b>Entrée</b>"
+
+#: ../src/interface.c:1249
+msgid "<b>HDEQ</b>"
+msgstr "<b>Egaliseur HD</b>"
+
+#: ../src/interface.c:1292
+msgid "25"
+msgstr "25"
+
+#: ../src/interface.c:1314
+msgid "31"
+msgstr "31"
+
+#: ../src/interface.c:1336
+msgid "39"
+msgstr ""
+
+#: ../src/interface.c:1358
+msgid "50"
+msgstr ""
+
+#: ../src/interface.c:1380
+msgid "62"
+msgstr ""
+
+#: ../src/interface.c:1402
+msgid "79"
+msgstr ""
+
+#: ../src/interface.c:1424
+msgid "100"
+msgstr ""
+
+#: ../src/interface.c:1446
+msgid "125"
+msgstr ""
+
+#: ../src/interface.c:1468
+msgid "158"
+msgstr ""
+
+#: ../src/interface.c:1490
+msgid "200"
+msgstr ""
+
+#: ../src/interface.c:1512
+msgid "251"
+msgstr ""
+
+#: ../src/interface.c:1534
+msgid "317"
+msgstr ""
+
+#: ../src/interface.c:1556
+msgid "400"
+msgstr ""
+
+#: ../src/interface.c:1578
+msgid "503"
+msgstr ""
+
+#: ../src/interface.c:1600
+msgid "634"
+msgstr ""
+
+#: ../src/interface.c:1622
+msgid "800"
+msgstr ""
+
+#: ../src/interface.c:1644
+msgid "1k"
+msgstr ""
+
+#: ../src/interface.c:1666
+msgid "1k2"
+msgstr ""
+
+#: ../src/interface.c:1688
+msgid "1k5"
+msgstr ""
+
+#: ../src/interface.c:1710
+msgid "2k"
+msgstr ""
+
+#: ../src/interface.c:1732
+msgid "2k5"
+msgstr ""
+
+#: ../src/interface.c:1754
+msgid "3k2"
+msgstr ""
+
+#: ../src/interface.c:1776
+msgid "4k"
+msgstr ""
+
+#: ../src/interface.c:1798
+msgid "5k"
+msgstr ""
+
+#: ../src/interface.c:1820
+msgid "6k"
+msgstr ""
+
+#: ../src/interface.c:1842
+msgid "8k"
+msgstr ""
+
+#: ../src/interface.c:1864
+msgid "10k"
+msgstr ""
+
+#: ../src/interface.c:1886
+msgid "12k"
+msgstr ""
+
+#: ../src/interface.c:1908
+msgid "16k"
+msgstr ""
+
+#: ../src/interface.c:1930
+msgid "20k"
+msgstr ""
+
+#: ../src/interface.c:1940
+msgid "<b>1000Hz</b>"
+msgstr ""
+
+#: ../src/interface.c:1946
+msgid "<b>0dB</b>"
+msgstr ""
+
+#: ../src/interface.c:1952
+msgid "<b>30 band EQ</b>"
+msgstr "<b>Egaliseur 30 bandes</b>"
+
+#: ../src/interface.c:1974
+msgid "<b>Spectrum</b>"
+msgstr "<b>Spectre</b>"
+
+#: ../src/interface.c:2003 ../src/interface.c:2038 ../src/interface.c:2073
+msgid "X=input db , Y=output db"
+msgstr "X=entrée dB , Y=sortie dB"
+
+#: ../src/interface.c:2016
+msgid "Low"
+msgstr "Graves"
+
+#: ../src/interface.c:2051
+msgid "Mid"
+msgstr "Médiums"
+
+#: ../src/interface.c:2086
+msgid "High"
+msgstr "Aigües"
+
+#: ../src/interface.c:2092
+msgid "<b>Compressor curves</b>"
+msgstr "<b>Courbes de compression</b>"
+
+#: ../src/interface.c:2107
+msgid "Bypass EQ processing"
+msgstr "Désactive l'égaliseur"
+
+#: ../src/interface.c:2109
+msgid "EQ bypass"
+msgstr "Désactiver égaliseur"
+
+#: ../src/interface.c:2124 ../src/interface.c:2137
+msgid "00000"
+msgstr "00000"
+
+#: ../src/interface.c:2132
+msgid "Crossover"
+msgstr "Filtre séparateur"
+
+#: ../src/interface.c:2161
+msgid "Low to Mid Band Crossover"
+msgstr "Fréquence de Coupure Graves/Médiums"
+
+#: ../src/interface.c:2175
+msgid "Mid to High Band Crossover"
+msgstr "Fréquence de Coupure Médiums/Aigües"
+
+#: ../src/interface.c:2252 ../src/interface.c:2555 ../src/interface.c:2858
+msgid "A"
+msgstr "A"
+
+#: ../src/interface.c:2261 ../src/interface.c:2564 ../src/interface.c:2867
+msgid "Attack"
+msgstr "Attaque"
+
+#: ../src/interface.c:2281 ../src/interface.c:2584 ../src/interface.c:2887
+msgid "R"
+msgstr "R"
+
+#: ../src/interface.c:2290 ../src/interface.c:2593 ../src/interface.c:2896
+#: ../src/interface.c:3249
+msgid "Release"
+msgstr "Relâche"
+
+#: ../src/interface.c:2310 ../src/interface.c:2613 ../src/interface.c:2916
+msgid "T"
+msgstr "S"
+
+#: ../src/interface.c:2319 ../src/interface.c:2622 ../src/interface.c:2925
+msgid "Threshold"
+msgstr "Seuil"
+
+#: ../src/interface.c:2338 ../src/interface.c:2641 ../src/interface.c:2944
+msgid "r"
+msgstr "r"
+
+#: ../src/interface.c:2347 ../src/interface.c:2650 ../src/interface.c:2953
+msgid "Ratio"
+msgstr "Ratio"
+
+#: ../src/interface.c:2366 ../src/interface.c:2669 ../src/interface.c:2972
+msgid "K"
+msgstr "T"
+
+#: ../src/interface.c:2375 ../src/interface.c:2678 ../src/interface.c:2981
+msgid "Knee"
+msgstr "Transition"
+
+#: ../src/interface.c:2394 ../src/interface.c:2697 ../src/interface.c:3000
+msgid "M"
+msgstr "G"
+
+#: ../src/interface.c:2404 ../src/interface.c:2707 ../src/interface.c:3010
+msgid "0.0"
+msgstr "0.0"
+
+#: ../src/interface.c:2408 ../src/interface.c:2711 ../src/interface.c:3014
+msgid "Auto makeup"
+msgstr "Rattrapage automatique"
+
+#: ../src/interface.c:2414 ../src/interface.c:2717 ../src/interface.c:3020
+msgid "Makeup gain"
+msgstr "Rattrapage de Gain"
+
+#: ../src/interface.c:2430 ../src/interface.c:2733 ../src/interface.c:3036
+msgid "Level"
+msgstr "Niveau"
+
+#: ../src/interface.c:2447 ../src/interface.c:2750 ../src/interface.c:3053
+msgid "Gain"
+msgstr "Gain"
+
+#: ../src/interface.c:2458
+msgid "Low Band Stereo Width"
+msgstr "Largeur Stéréo Bande Graves"
+
+#: ../src/interface.c:2478 ../src/interface.c:2781 ../src/interface.c:3084
+msgid "Solo"
+msgstr "Solo"
+
+#: ../src/interface.c:2482
+msgid "Low Band Solo"
+msgstr "Solo Bande Graves"
+
+#: ../src/interface.c:2488
+msgid "Bypass low band compressor processing"
+msgstr "Désactive la bande graves du compresseur"
+
+#: ../src/interface.c:2490 ../src/interface.c:2793 ../src/interface.c:3096
+msgid "Bypass"
+msgstr "Désactiver"
+
+#: ../src/interface.c:2499
+msgid "Toggle the low band delay (set in Preferences)"
+msgstr "Active le retard de la bande graves (réglé dans les préférences)"
+
+#: ../src/interface.c:2501 ../src/interface.c:2804
+msgid "Delay"
+msgstr "Retard"
+
+#: ../src/interface.c:2506
+msgid "<b>Low : 00000 - 00000</b>"
+msgstr "<b>Graves : 00000 - 00000</b>"
+
+#: ../src/interface.c:2761
+msgid "Mid Band Stereo Width"
+msgstr "Largeur Stéréo Bande Médiums"
+
+#: ../src/interface.c:2785
+msgid "Mid Band Solo"
+msgstr "Solo Bande Médiums"
+
+#: ../src/interface.c:2791
+msgid "Bypass mid band compressor processing"
+msgstr "Désactive la bande médiums du compresseur"
+
+#: ../src/interface.c:2802
+msgid "Toggle the mid band delay (set in Preferences)"
+msgstr "Active le retard de la bande médiums (réglé dans les préférences)"
+
+#: ../src/interface.c:2809
+msgid "<b>Mid : 00000 - 00000</b>"
+msgstr "<b>Médiums : 00000 - 00000</b>"
+
+#: ../src/interface.c:3064
+msgid "High Band Stereo Width"
+msgstr "Largeur Stéréo Bande Aigües"
+
+#: ../src/interface.c:3088
+msgid "High Band Solo"
+msgstr "Solo Bande Aigües"
+
+#: ../src/interface.c:3094
+msgid "Bypass high band compressor processing"
+msgstr "Désactive la bande aigües du compresseur"
+
+#: ../src/interface.c:3101
+msgid "<b>High : 00000 - 00000</b>"
+msgstr "<b>Aigües : 00000 - 00000</b>"
+
+#: ../src/interface.c:3129
+msgid "Amount "
+msgstr "Quantité"
+
+#: ../src/interface.c:3140
+msgid "<b>Boost</b>"
+msgstr "<b>Boost</b>"
+
+#: ../src/interface.c:3167
+msgid "Input"
+msgstr "Entrée"
+
+#: ../src/interface.c:3211
+msgid "----"
+msgstr "----"
+
+#: ../src/interface.c:3220
+msgid "1.000 ms"
+msgstr "1.000 ms"
+
+#: ../src/interface.c:3257
+msgid "Limit"
+msgstr "Seuil"
+
+#: ../src/interface.c:3305
+msgid "Linear/log release"
+msgstr ""
+
+#: ../src/interface.c:3320
+msgid "Bypass boost and limiter processing"
+msgstr "Désactive le boost et le limiteur"
+
+#: ../src/interface.c:3322
+msgid "Limiter bypass"
+msgstr "Désactiver limiteur"
+
+#: ../src/interface.c:3327
+msgid "<b>Fast-lookahead-limiter (Harris)</b>"
+msgstr ""
+
+#: ../src/interface.c:3355
+msgid "Left channel output peak/level"
+msgstr ""
+
+#: ../src/interface.c:3366
+msgid "Right channel output peak/level"
+msgstr ""
+
+#: ../src/interface.c:3377
+msgid "Left channel RMS peak/level"
+msgstr ""
+
+#: ../src/interface.c:3388
+msgid "Right channel RMS peak/level"
+msgstr ""
+
+#: ../src/interface.c:3393
+msgid "<b>OUT</b>"
+msgstr ""
+
+#: ../src/interface.c:3402
+msgid "<b>RMS</b>"
+msgstr ""
+
+#: ../src/interface.c:3425
+msgid "Output level"
+msgstr "Niveau de sortie"
+
+#: ../src/interface.c:3438
+msgid "RMS (outer) and Output (inner) levels"
+msgstr ""
+
+#: ../src/interface.c:3489
+msgid "Bypass all processing"
+msgstr "Désactive tous les traitements"
+
+#: ../src/interface.c:3491
+msgid "Global bypass"
+msgstr "Tout désactiver"
+
+#: ../src/interface.c:3496
+msgid "<b>Output</b>"
+msgstr "<b>Sortie</b>"
+
+#: ../src/interface.c:4958
+msgid "Set"
+msgstr "Régler"
+
+#: ../src/interface.c:4962
+msgid "Assign settings to button"
+msgstr "Assigne les paramètres au bouton"
+
+#: ../src/interface.c:4969
+msgid "Clear"
+msgstr "Vider"
+
+#: ../src/interface.c:4973
+msgid "Clear settings from button"
+msgstr "Vide les paramètres du bouton"
+
+#: ../src/interface.c:4980
+msgid "Name"
+msgstr "Nom"
+
+#: ../src/interface.c:4984
+msgid "Set scene name"
+msgstr "Nomme la scène"
+
+#: ../src/interface.c:4997 ../src/interface.c:6353
+msgid "Help"
+msgstr "Aide"
+
+#: ../src/interface.c:5001
+msgid "Display scene menu help information"
+msgstr ""
+
+#: ../src/interface.c:5136
+msgid "Preferences"
+msgstr "Préférences"
+
+#: ../src/interface.c:5165
+msgid "Mi_nimum gain (db):"
+msgstr "Gain mi_nimal (en dB):"
+
+#: ../src/interface.c:5175
+msgid "Set the minimum gain level for the EQs"
+msgstr "Règle le niveau de gain minimal des égaliseurs"
+
+#: ../src/interface.c:5182
+msgid "_Maximum gain (db):"
+msgstr "Gain _maximal (en dB):"
+
+#: ../src/interface.c:5192
+msgid "Set the maximum gain level for the EQs"
+msgstr "Règle le niveau de gain maximal des égaliseurs"
+
+#: ../src/interface.c:5194
+msgid "<i><b>Graphic EQ</b></i>"
+msgstr "<i><b>Egaliseur graphique</b></i>"
+
+#: ../src/interface.c:5222
+msgid "_Crossfade time (sec):"
+msgstr "Temps fondu en_chaîné (en s):"
+
+#: ../src/interface.c:5232
+msgid "Change the crossfade time for scene changes"
+msgstr "Change le temps de fondu enchaîné pour les changements de scène"
+
+#: ../src/interface.c:5235
+msgid "<i><b>Crossfade</b></i>"
+msgstr "<i><b>Fondu enchaîné</b></i>"
+
+#: ../src/interface.c:5258
+msgid "Input/Output meters (dBFS):"
+msgstr "VU-mètres Entrée/Sortie (dBFS):"
+
+#: ../src/interface.c:5270
+msgid "<i><b>Warning Level</b></i>"
+msgstr "<i><b>Niveau d'Alerte</b></i>"
+
+#: ../src/interface.c:5296
+msgid "Select HDEQ spectrum source"
+msgstr "Selectionner spectre source égaliseur HD"
+
+#: ../src/interface.c:5302
+msgid "Pre EQ"
+msgstr "Pré-égalisation"
+
+#: ../src/interface.c:5303
+msgid "Post EQ"
+msgstr "Post-égalisation"
+
+#: ../src/interface.c:5304
+msgid "Post Compressor"
+msgstr "Post-compresseur"
+
+#: ../src/interface.c:5305
+msgid "Output"
+msgstr "Sortie"
+
+#: ../src/interface.c:5312
+msgid "_Update frequency (Hz):"
+msgstr "Fréquence de mise à jo_Ur (Hz):"
+
+#: ../src/interface.c:5322
+msgid "Change the spectrum update frequency"
+msgstr "Change la fréquence de mise à jour du spectre"
+
+#: ../src/interface.c:5324
+msgid "<i><b>Spectrum</b></i>"
+msgstr "<i><b>Spectre</b></i>"
+
+#: ../src/interface.c:5352
+msgid "_FFT"
+msgstr "_FFT"
+
+#: ../src/interface.c:5356
+msgid "FFT is more CPU intensive but is the best choice"
+msgstr "FFT (Transformée de Fourier Rapide) est plus consommateur de ressources CPU mais est le meilleur choix"
+
+#: ../src/interface.c:5360
+msgid "II_R"
+msgstr "II_R"
+
+#: ../src/interface.c:5364
+msgid "IIR is less CPU intensive but is not recommended for serious work"
+msgstr ""
+"IIR (Réponse Impulsionnelle Infinie) est moins consommateur de ressources CPU mais n'est pas recommandé pour "
+"le travail exigeant"
+
+#: ../src/interface.c:5368
+msgid "<i><b>Crossover Type</b></i>"
+msgstr "<i><b>Type de filtre séparateur</b></i>"
+
+#: ../src/interface.c:5386
+msgid "Time (ms):"
+msgstr "Temps (ms):"
+
+#: ../src/interface.c:5402
+msgid "Samples:"
+msgstr ""
+
+#: ../src/interface.c:5410
+msgid "0"
+msgstr "0"
+
+#: ../src/interface.c:5418
+#, fuzzy
+msgid "<i><b>RMS Sample Size</b></i>"
+msgstr "<i><b>Spectre</b></i>"
+
+#: ../src/interface.c:5442
+msgid "Low band"
+msgstr "Bande Graves"
+
+#: ../src/interface.c:5450
+msgid "Mid band"
+msgstr "Bande Médiums"
+
+#: ../src/interface.c:5476
+msgid "<b><i>Band Delays</i></b>"
+msgstr "<b><i>Retards des bandes</i></b>"
+
+#: ../src/interface.c:5502
+msgid "Select colors for main JAMin GUI components"
+msgstr "Règle les couleurs des composants de l'interface"
+
+#: ../src/interface.c:5508
+msgid "Low Band Compressor"
+msgstr "Compresseur bande graves"
+
+#: ../src/interface.c:5509
+msgid "Mid Band Compressor"
+msgstr "Compresseur bande médiums"
+
+#: ../src/interface.c:5510
+msgid "High Band Compressor"
+msgstr "Compresseur bande aigües"
+
+#: ../src/interface.c:5511
+msgid "Ganged Controls"
+msgstr "Contrôleurs liés"
+
+#: ../src/interface.c:5512
+msgid "Parametric Handles"
+msgstr "Poignées paramétriques"
+
+#: ../src/interface.c:5513
+msgid "HDEQ Curve"
+msgstr "Courbe égaliseur HD"
+
+#: ../src/interface.c:5514
+msgid "HDEQ Spectrum"
+msgstr "Spectre égaliseur HD"
+
+#: ../src/interface.c:5515
+msgid "HDEQ Grid"
+msgstr "Grille égaliseur HD"
+
+#: ../src/interface.c:5516
+msgid "HDEQ Background"
+msgstr "Arrière plan égaliseur HD"
+
+#: ../src/interface.c:5517
+msgid "Text"
+msgstr "Texte"
+
+#: ../src/interface.c:5518
+msgid "Meter Normal"
+msgstr "VU-mètre normal"
+
+#: ../src/interface.c:5519
+msgid "Meter Warning"
+msgstr "Alerte VU-mètre"
+
+#: ../src/interface.c:5520
+msgid "Meter Over"
+msgstr "Dépassement VU-mètre"
+
+#: ../src/interface.c:5521
+msgid "Meter Peak"
+msgstr "Crête VU-mètre"
+
+#: ../src/interface.c:5522
+msgid "Reset All Colors To Defaults"
+msgstr "Réinitialiser Toutes les Couleurs"
+
+#: ../src/interface.c:5524
+msgid "<i><b>Colors</b></i>"
+msgstr "<i><b>Couleurs</b></i>"
+
+#: ../src/interface.c:5546
+msgid "Select the type of limiter"
+msgstr ""
+
+#: ../src/interface.c:5552
+msgid "Steve Harris' fast_lookahead_limiter"
+msgstr ""
+
+#: ../src/interface.c:5553
+msgid "Sampo Savolainen's foo_limiter"
+msgstr ""
+
+#: ../src/interface.c:5555
+msgid "<b>Limiter</b>"
+msgstr "<b>Limiteur</b>"
+
+#: ../src/interface.c:5578
+msgid "Output meter peak"
+msgstr "Crête VU-mètre"
+
+#: ../src/interface.c:5585
+msgid "Output meter level"
+msgstr "Niveau VU-mètre"
+
+#: ../src/interface.c:5592
+msgid "RMS meter peak"
+msgstr "Crête VU-mètre RMS"
+
+#: ../src/interface.c:5599
+msgid "RMS meter level"
+msgstr "Niveau VU-mètre RMS"
+
+#: ../src/interface.c:5606
+msgid "<b><i>Output Meter Numeric Display</i></b>"
+msgstr "<b><i>Affichage numérique VU-mètre sortie</i></b>"
+
+#: ../src/interface.c:5628
+msgid "Close the Preferences window"
+msgstr "Ferme la fenêtre de Préférences"
+
+#: ../src/interface.c:5834
+msgid "Select Color"
+msgstr "Régler la couleur"
+
+#: ../src/interface.c:5883
+msgid "Scene X Name"
+msgstr "Nom Scène X"
+
+#: ../src/interface.c:5961
+msgid "filter tuning [DEBUG]"
+msgstr ""
+
+#: ../src/interface.c:5976
+msgid "Bar A bias"
+msgstr ""
+
+#: ../src/interface.c:5982
+msgid "HPA bias"
+msgstr ""
+
+#: ../src/interface.c:5988
+msgid "Bar B bias"
+msgstr ""
+
+#: ../src/interface.c:5994
+msgid "HPB bias"
+msgstr ""
+
+#: ../src/interface.c:6000
+msgid "LPA rez"
+msgstr ""
+
+#: ../src/interface.c:6006
+msgid "HPA rez"
+msgstr ""
+
+#: ../src/interface.c:6012
+msgid "LPB rez"
+msgstr ""
+
+#: ../src/interface.c:6018
+msgid "HPB rez"
+msgstr ""
+
+#: ../src/interface.c:6164
+msgid "About JAMin"
+msgstr "À propos de JAMin"
+
+#: ../src/interface.c:6204
+msgid ""
+"\n"
+"JAMin is the JACK Audio Mastering interface.  JAMin is designed to perform "
+"professional audio mastering of any number of input streams.  It consists of "
+"a number of tools to do this: a 1024 band hand drawn EQ with modifiable "
+"parametric controls, a 31 band graphic EQ, 3 band compressor, 3 band stereo "
+"width control, lookahead limiter, boost, and a number of other features."
+msgstr ""
+
+#: ../src/interface.c:6206
+msgid "_What Is JAMin"
+msgstr ""
+
+#: ../src/interface.c:6226
+msgid ""
+"\n"
+"Steve Harris is the JAMin principle author and team leader.\n"
+"\n"
+"SourceForge CVS developers, in alphabetical order:\n"
+"\n"
+"Jan Depner\n"
+"Steve Harris\n"
+"Jack O'Quin\n"
+"Ron Parker\n"
+"Emmanuel Saracco\n"
+"Patrick Shirkey\n"
+"\n"
+"Translators:\n"
+"\n"
+"Alexandre Prokoudine (Russian)\n"
+msgstr ""
+
+#: ../src/interface.c:6228
+msgid "_Developers"
+msgstr ""
+
+#: ../src/interface.c:6248
+msgid ""
+"\n"
+"JAMin is released under the GNU General Public License and is copyright (c) "
+"2003 J. Depner, S. Harris, J. O'Quin, R. Parker, and P. Shirkey. \n"
+"\n"
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version. \n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#: ../src/interface.c:6250
+msgid "_License"
+msgstr ""
+
+#: ../src/interface.c:6270
+msgid ""
+"\n"
+"Web site: http://jamin.sourceforge.net\n"
+"\n"
+"Mailing list: http://lists.sourceforge.net/lists/listinfo/jamin-devel\n"
+"\n"
+"Project page: http://sourceforge.net/projects/jamin/"
+msgstr ""
+
+#: ../src/interface.c:6272
+msgid "_Online"
+msgstr "_En ligne"
+
+#: ../src/interface.c:6335
+msgid "Reset HDEQ curve"
+msgstr "Réinitialiser courbe égaliseur HD"
+
+#: ../src/interface.c:6339
+msgid "Reset the HDEQ curve to zero"
+msgstr "Mettre la courbe égaliseur HD à zéro"
+
+#: ../src/interface.c:6341
+msgid "Release parametric EQ controls"
+msgstr ""
+
+#: ../src/interface.c:6345
+msgid "Release the parametric controls but leave the EQ curve as is"
+msgstr ""
+
+#: ../src/interface.c:6357
+msgid "Display HDEQ help page"
+msgstr "Afficher aide égaliseur HD"
+
+#: ../src/interface.c:6370
+msgid "Cancel"
+msgstr "Abandonner"
+
+#: ../src/interface.c:6374
+msgid "Close the popup menu"
+msgstr "Fermer le menu popup"
+
+#: ../src/intrim.c:201
+#, c-format
+msgid "left %.0fdB"
+msgstr "gauche %.0fdB"
+
+#: ../src/intrim.c:203
+#, c-format
+msgid "right %.0fdB"
+msgstr "droite %.0fdB"
+
+#: ../src/intrim.c:205
+#, c-format
+msgid "centre"
+msgstr "centre"
+
+#: ../src/io-menu.c:88
+#, c-format
+msgid "iomenu error: %s\n"
+msgstr ""
+
+#: ../src/io-menu.c:111 ../src/io-menu.c:118 ../src/io-menu.c:185
+#: ../src/io-menu.c:231
+#, c-format
+msgid "connecting port %s to %s\n"
+msgstr "connexion port %s à %s\n"
+
+#: ../src/io-menu.c:114
+#, c-format
+msgid "unable to connect from %s\n"
+msgstr "connexion impossible depuis %s\n"
+
+#: ../src/io-menu.c:121
+#, c-format
+msgid "unable to connect to %s\n"
+msgstr "connexion impossible à %s\n"
+
+#: ../src/io-menu.c:137 ../src/io-menu.c:144 ../src/io-menu.c:175
+#: ../src/io-menu.c:221
+#, c-format
+msgid "disconnecting port %s from %s\n"
+msgstr "déconnexion port %s à %s\n"
+
+#: ../src/io-menu.c:140 ../src/io-menu.c:147
+#, c-format
+msgid "unable to disconnect port %s\n"
+msgstr "déconnexion du port %s impossible\n"
+
+#: ../src/io-menu.c:179 ../src/io-menu.c:225
+#, c-format
+msgid "unable to disconnect %s from %s\n"
+msgstr "déconnexion de %s à %s impossible\n"
+
+#: ../src/io-menu.c:189 ../src/io-menu.c:235
+#, c-format
+msgid "unable to connect %s to %s\n"
+msgstr "connexion de %s à %s impossible\n"
+
+#: ../src/io-menu.c:367
+msgid "Groups"
+msgstr "Groupes"
+
+#: ../src/io-menu.c:564
+msgid "In"
+msgstr "Entrée"
+
+#: ../src/io-menu.c:567
+msgid "Out"
+msgstr "Sortie"
+
+#: ../src/io.c:233
+#, c-format
+msgid "%s internal error %d: %s\n"
+msgstr "%s erreur interne %d: %s\n"
+
+#: ../src/io.c:235
+#, c-format
+msgid " Terminating due to -F option.\n"
+msgstr ""
+
+#: ../src/io.c:697
+#, c-format
+msgid ""
+"File %s : %s\n"
+"Using default."
+msgstr ""
+
+#: ../src/io.c:731
+#, c-format
+msgid "%s: jack_client_open() failed, status = 0x%2.0x\n"
+msgstr ""
+
+#: ../src/io.c:736
+#, c-format
+msgid "%s: JACK server started\n"
+msgstr "%s: le serveur JACK a démarré\n"
+
+#: ../src/io.c:740
+#, c-format
+msgid "%s: unique name `%s' assigned\n"
+msgstr "%s: nom unique `%s' attribué\n"
+
+#: ../src/io.c:747
+#, c-format
+msgid "%s: Cannot contact JACK server, is it running?\n"
+msgstr "%s: Impossible de contacter le serveur JACK. Est-il lancé?\n"
+
+#: ../src/io.c:866
+#, c-format
+msgid ""
+"Usage: %s [-%s] [inport1 inport2 [outport1 outport2]]\n"
+"\n"
+"user options:\n"
+"\t-f file\tload session file on startup\n"
+"\t-h\tshow this help\n"
+"\t-j name\tJACK server name\n"
+"\t-n name\tJACK client name\n"
+"\t-s freq\tset spectrum update frequency\n"
+"\t-c time\tcrossfade time\n"
+"\t-r\tuse example GTK resource file\n"
+"\t-p\tdo not automatically connect JACK output ports\n"
+"\t-i\tUse IIR crossover instead of FFT\n"
+"\t-l limiter\tUse fast-lookahead limiter(0) or foo-limiter(1)\n"
+"\t-v\tverbose output (use -vv... for more detail)\n"
+"\t-V\tprint JAMin version and quit\n"
+"\n"
+"developer options:\n"
+"\t-d\tdummy mode (don't connect to JACK)\n"
+"\t-F\ttreat all errors as fatal\n"
+"\t-T\tprint trace buffer\n"
+"\t-t\tdon't start separate DSP thread\n"
+"\n"
+msgstr ""
+
+#: ../src/io.c:1074
+#, c-format
+msgid ""
+"%s: not permitted to create realtime DSP thread.\n"
+"\tYou must run as root or use JACK capabilities.\n"
+"\tContinuing operation, but with -t option.\n"
+msgstr ""
+
+#: ../src/io.c:1125
+#, c-format
+msgid "%s: Cannot register JACK ports."
+msgstr "%s: Impossible d'enregistrer les ports JACK."
+
+#: ../src/io.c:1131
+#, c-format
+msgid "%s: Cannot activate JACK client."
+msgstr "%s: Impossible d'activer le client JACK."
+
+#: ../src/io.c:1152
+#, c-format
+msgid "No physical playback ports found"
+msgstr "Aucune port physique de playback trouvé"
+
+#: ../src/io.c:1164
+#, c-format
+msgid "Cannot connect input port \"%s\"\n"
+msgstr "Impossible de se connecter au port d'entrée \"%s\"\n"
+
+#: ../src/io.c:1174
+#, c-format
+msgid "Cannot connect output port \"%s\"\n"
+msgstr "Impossible de se connecter au port de sortie \"%s\"\n"
+
+#: ../src/main.c:90
+#, c-format
+msgid ""
+"(C) 2003-2005 J. Depner, S. Harris, J. O'Quin, R. Parker and P. Shirkey\n"
+msgstr "(C) 2003-2005 J. Depner, S. Harris, J. O'Quin, R. Parker et P. Shirkey\n"
+
+#: ../src/main.c:92
+#, c-format
+msgid ""
+"This is free software, and you are welcome to redistribute it\n"
+"under certain conditions; see the file COPYING for details.\n"
+msgstr ""
+
+#: ../src/status-ui.c:46
+msgid "Disconnected"
+msgstr "Déconnecté"
+
+#: ../src/status-ui.c:50
+msgid "Stopped"
+msgstr "Arrêté"
+
+#: ../src/status-ui.c:54
+msgid "Starting"
+msgstr "Démarre"
+
+#: ../src/status-ui.c:58
+msgid "Rolling"
+msgstr "Défile"
+
+#: ../src/status-ui.c:62
+msgid "[unknown]"
+msgstr "[inconnu]"
+
+#: ../src/status-ui.c:67
+msgid "  |  RT"
+msgstr "  |  TR"
+
+#: ../src/status-ui.c:72
+#, c-format
+msgid "%s  |  %4.1f%% CPU  |  %d xruns  |  %<PRIu32> frames  |  %<PRIu32> Hz%s"
+msgstr ""
+"%s  |  %4.1f%% CPU  |  %d désynchronisations (xruns)  |  %<PRIu32> "
+"échantillons  |  %<PRIu32> Hz%s"
+
+#: ../src/support.c:90 ../src/support.c:114
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr "Fichier pixmap introuvable: %s"
+

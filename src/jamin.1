@@ -1,0 +1,202 @@
+.TH JAMIN "1" 0.98.8 "June 2007" "Audio"
+.SH "NAME"
+jamin \- JACK Audio Mastering interface
+
+.SH "SYNOPSIS"
+\fBjamin\fR [\fI options \fR] [\fI inport1 inport2\fR [\fI outport1
+outport2\fR ]]
+
+\fBjamin-scene\fR \fI<scene-num>\fR
+
+.SH "DESCRIPTION"
+The \fBjamin\fR command invokes JAMin, the JACK Audio Mastering
+interface which is based on the JACK Audio Connection Kit,
+<\fBhttp://jackit.sourceforge.net\fR>.
+
+JAMin is designed for professional stereo audio mastering.  It
+provides of a number of tools: a 1024-band hand-drawn EQ with
+parametric controls, a 31-band graphic EQ, 3-band compressor, 3-band
+stereo width control, lookahead limiter, boost, and other features.
+
+For the latest JAMin information, see
+<\fBhttp://jamin.sourceforge.net\fR>.
+
+.SH "OPTIONS"
+.TP 
+\fB\-f\fR \fIfilename\fR
+.br 
+Load session file \fIfilename\fR on startup.  If no session file is
+specified, JAMin loads "~/.jamin/default.jam" if that exists, or
+else uses some system-provided default settings.
+.TP 
+\fB\-h\fR
+.br 
+Print a brief usage message describing the main \fBjamin\fR options,
+including some developer options not intended for normal users.
+.TP 
+\fB\-j\fR \fIservername\fR
+.br 
+Connect to JACK server \fIservername\fR.  Otherwise, use the default
+server.
+.TP 
+\fB\-n\fR \fIclientname\fR
+.br 
+Set JACK \fIclientname\fR used to identify input and output ports.
+Otherwise, use "jamin".
+.TP 
+\fB\-s\fR \fIfrequency\fR
+.br 
+Set the spectrum update frequency (per second).  The range is 1 to 10 
+with 10 as the default.  Set to 0 to disable spectrum update.
+.TP 
+\fB\-c\fR \fItime\fR
+.br 
+Set the crossfade time in seconds.  The range is 0.0 to 2.0 with 1.0 as 
+the default.  WARNING: fast crossfade times in combination with large 
+jack buffer sizes may introduce zipper noise to some signals (especially 
+sustained sounds in the bass range).
+.TP 
+\fB\-p\fR
+.br 
+Don't automatically connect any JACK output ports.  
+
+Without this option, JAMin will connect to \fIoutport1\fR and
+\fIoutport2\fR if they were explicitly listed on the command line.  If
+not, it connects to the first two physical output ports with the
+string ":playback" in their names.
+.TP 
+\fB\-i\fR
+.br 
+Use IIR type crossover instead of the default FFT type crossover.
+The IIR crossover is less CPU intensive but the FFT crossover will
+give better results (YMMV).
+.TP 
+\fB\-l\fR
+.br 
+Set to 0 to use Steve Harris' fast-lookahead-limiter or 1 for Sampo
+Savolainen's foo-limiter.  At this time there is a problem with
+the foo-limiter if you push the input too hard.
+.TP 
+\fB\-r\fR
+.br 
+Load GTK resource information from an example JAMin resource file.  If
+the \fB\-r\fR option is not specified, look for a user-defined
+resource file in \fB~/.jamin/jamin_ui\fR.  Otherwise, use the
+system-wide GTK settings.
+.TP 
+\fB\-v\fR
+.br 
+Print verbose output.  Use \fB\-vv\fR or \fB\-vvv\fR for more detail.
+.TP 
+\fB\-V\fR
+Print version and copyright information, then quit.
+
+.SH FILES
+.TP
+.B ~/.jamin
+Directory containing per-user JAMin data.  Created automatically if
+it does not already exist.
+.TP
+.B ~/.jamin/jamin_ui
+Default resource file for GTK user interface customization, used when
+the \fB\-r\fR command option is not specified.  JAMin provides a
+default resource file in ${prefix}/share/jamin/examples/jamin_ui.  To
+customize that file, copy it to ~/.jamin/jamin_ui and make changes.
+.TP
+.B ~/.jamin/*.jam
+Normal location for user-defined session files.  They can be stored
+elsewhere, if desired.
+.TP
+.B ~/.jamin/default.jam
+If this session file exists, it is loaded by default on startup, except
+when overridden by the \fB\-f\fR option.
+
+.SH IPC
+.PP
+If JAMin has been built with OSC support enabled it responds to UDP OSC
+messages on port 4444.
+.PP
+Messages to /jamin/scene with a numerical argument cause the scene number to
+change. A commaind line tool (\fBjamin-scene\fR) and LADSPA Plugin
+(\fBjamin_cont\fR, ID:1912) are provided for remote scene changes.
+
+.SH "EXAMPLES"
+.PP 
+Since \fBjamin\fR is not a standalone program we generally need other
+programs to provide input audio and receive the mastered output.  This
+example uses \fBalsaplayer\fR with output going to the first two ALSA
+playback ports:
+
+.IP 
+\fBjackd \-R \-d alsa \-p 2048 \-r 44100 &\fR
+.br 
+\fBalsaplayer -o jack \-s src \-d noconnect song.wav &\fR
+.br 
+\fBjamin src:out_1 src:out_2\fR
+.br 
+
+.PP
+That was the brute force method.  It is much easier to have
+\fBqjackctl\fR start the JACK server and handle its connections.
+After the server is running, start \fBjackplayer\fR and \fBjamin\fR.
+The "transport" option tells \fBjackplayer\fR (an \fBalsaplayer\fR
+alias) to start and stop under JACK transport control.
+
+.br 
+.IP 
+\fBqjackctl &\fR
+.br 
+\fBjackplayer \-d noconnect/transport song.wav &\fR
+.br 
+\fBjamin\fR
+.PP 
+Any JACK-aware player such as \fBrezound\fR, \fBecasound\fR or
+\fBecamegapedal\fR can be used, instead.
+
+.PP
+A more advanced technique uses \fBardour\fR for both the source and
+destination.  In \fBardour\fR, run all of your track outputs into a
+stereo bus, connect its output ports to JAMin, then run the JAMin
+outputs back into a record-enabled stereo track.  This allows mixing
+and mastering at the same time.  If JAMin is already running when
+\fBardour\fR reopens the session, it will automatically reconnect all
+these ports.
+
+.br 
+.IP 
+\fBqjackctl &\fR
+.br 
+\fBjamin &\fR
+.br 
+\fBardour\fR
+
+.SH "SEE ALSO:"
+.BR <\fBhttp://jamin.sourceforge.net\fR>
+.br 
+.BR <\fBhttp://www.alsa\-project.org\fR>
+.br 
+.BR <\fBhttp://jackaudio.org\fR>
+.br 
+.BR <\fBhttp://qjackctl.sourceforge.net\fR>
+.br 
+.BR <\fBhttp://www.suse.de/~mana/jack.html\fR>
+.br 
+.BR <\fBhttp://alsaplayer.sourceforge.net\fR>
+.br 
+.BR <\fBhttp://www.ardour.org\fR>
+.br 
+.BR <\fBhttp://rezound.sourceforge.net\fR>
+.br 
+.BR jackd(1)
+.br 
+.BR alsaplayer(1)
+.br 
+.BR ardour(1)
+.SH "BUGS"
+Please send bug reports to <\fBjamin\-devel@lists.sourceforge.net\fR>.
+.SH "AUTHORS"
+Steve Harris is the principal JAMin author and team leader.  Other
+developers include: Jan Depner, Jack O'Quin, Ron Parker, Emmanuel
+Saracco, and Patrick Shirkey.  Alexandre Prokoudine and Yuri N.
+Sedunov developed the translation infrastructure.  Alexandre also
+translated JAMin into Russian and is our (really good) web engineer.

@@ -1,0 +1,23 @@
+# symbol(card)	description
+load		Load file
+in-gain		Input gain
+out-gain	Output gain
+in-pan		Input pan
+eq-gain(1024)	EQ Gain
+xover-freq(2)	Crossover frequency
+comp-attack(3)	Compressor attack
+comp-release(3)	Compressor release
+comp-thresh(3)	Compressor threshold
+comp-ratio(3)	Compressor ratio
+comp-knee(3)	Compressor knee
+comp-makeup(3)	Compressor makeup gain
+stereo-width(3)	Stereo width
+lim-input	Limiter input gain
+lim-time	Limiter time
+lim-limit	Limiter level
+boost		Waveshaper boost
+lim-logscale	Limiter logscale
+notch-gain(5)	Notch gain
+notch-freq(5)	Notch frequency
+notch-q(5)	Notch Q
+notch-flag(5)	Notch active flag

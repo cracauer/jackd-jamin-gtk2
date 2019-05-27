@@ -1,0 +1,17 @@
+
+Like many projects, JAMin originated in discussions on the Linux Audio
+Developers mailing list.  Steve Harris is the principle author and
+team leader.
+
+SourceForge CVS developers, in alphabetical order:
+
+Jan Depner
+Steve Harris
+Jack O'Quin
+Ron Parker
+Emmanuel Saracco
+Patrick Shirkey
+
+Others have contributed significant ideas or patches.  Alexandre
+Prokoudine and Yuri N. Sedunov developed the translation
+infrastructure, and Alexandre provided our Russian translation.

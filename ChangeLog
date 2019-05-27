@@ -1,0 +1,198 @@
+2008-02-08  Emmanuel Saracco  <esaracco@free.fr>
+
+	* Take in account libdir defined at compile time
+	  for LADSPA plugins search path.
+
+2008-02-04  Emmanuel Saracco  <esaracco@free.fr>
+
+	* Avoid some GCC warnings about cast.
+
+2008-02-03  Emmanuel Saracco  <esaracco@free.fr>
+
+	* Version: 0.97.13
+	* Install libs under lib64 directory on 64bits architectures.
+
+2008-02-02  Emmanuel Saracco  <esaracco@free.fr>
+
+	* Save/Load Crossover type to/from JAMin session file.
+	* Refresh preferences dialog properties when session file is loaded.
+
+2005-11-15  Steve Harris  <steve@plugin.org.uk>
+
+	* Fixed OSC scene path discrepencies.
+
+2005-08-17  Jan Depner  <eviltwin69@cableone.net>
+
+	* Cleaned up the preferences dialog a bit.
+	* Added warning tooltips to crossover type buttons.
+
+2005-04-24  Jan Depner  <eviltwin69@cableone.net>
+
+	* Made parametric (notch) handles larger for ease of use.
+	* Allow parametric notch Q handles to overlap.
+	* Button 2 can now also be used to move parametric handles without
+	  the possibility of missing and drawing the EQ curve.
+	* Fixed the preferences scene crossfade time option so you can
+	  select by .1 second.
+
+2005-01-22  Steve Harris  <steve@plugin.org.uk>
+
+	* gtkmeter.c: fixed incorrect constant in gtkmeter.c that caused the
+	  meter to jump between -50 and -60 dB's.
+
+2004-12-26  Jack O'Quin  <joq@io.com>
+
+	* Updated ru.po from Alexandre
+
+2004-12-15  Jack O'Quin  <joq@io.com>
+
+	* added -j servername option to select JACK server
+
+2004-12-06  Steve Harris  <steve@plugin.org.uk>
+
+	* jam_ui.glade: changed packing of about dialogue so that the logo
+	  fills, but doesnt expand.
+
+2004-11-01  Jack O'Quin  <joq@io.com>
+
+	* Use jack_client_open(), if available.  Use actual client name in
+	title bar, not necessarily PACKAGE name.
+
+2004-10-28  Steve Harris  <steve@plugin.org.uk>
+
+	* src/process.c: added some code to change the bandwidth of the filters
+	  dynamically with cutoff freq. doesnt work that well
+
+2004-10-26  Steve Harris  <steve@plugin.org.uk>
+
+	* src/process.c: added a #ifdef'd section on FILER_TUNING that allows
+	  you to tune the filter paramters dynamically.
+	* jam-ui.glade: added a window that is only created if the macro is
+	  defined.
+
+2004-10-23  Jan Depner  <eviltwin69@cableone.net>
+
+	  Crossover type can be selected from the options->preferences menu
+	  or by using the -i command line option.
+
+2004-10-22  Steve Harris  <steve@plugin.org.uk>
+
+	* src/process.c: Abandon using RBJ biquads and the crazy inverting
+	  scheme, it was too complicated. Now using pairs of Butterworth
+	  HP/LP's in a traditional crossover network. Seems to sound good.
+	  The use of IIR xovers is controled by the variable iir_xover, defined
+	  in process.c.
+
+2004-10-21  Steve Harris  <steve@plugin.org.uk>
+
+	  The code now uses IIR biquads to do the corssover. Theres a lopass
+	  that splits off the lower band, mid+high is got by inverting that
+	  filter then mid is extracted by lowpassing the mid+high signal,
+	  and the 2nd filter is inverted to get the high band.
+
+	  I'm not sure this is a good technique, but it seems to work.
+
+	* src/process.c: Made a new function run_eq_iir() that uses IIR filters
+	  to do the crossover.
+	* src/biquad.h: Added, from sqh-plugins.
+	* src/denomral-kill.h: split from process.c.
+
+2004-10-05  Steve Harris  <steve@plugin.org.uk>
+
+	* src/Makefile.am: Bugfix from Mario Lang to allow building on machines
+	  with libxml2 headers in a non-standard location
+
+2004-08-01  Steve Harris  <steve@plugin.org.uk>
+
+	* jamin.1.in: Added notes saying how the OSC method can be used.
+
+2004-07-17  Steve Harris  <steve@plugin.org.uk>
+
+	* limiter*.c: Replaced limiter code with code to drive new limiter
+	  fastLookaheadLimiter(1913). JAMin now requires swh-plugins 0.4.6+.
+	* jam-ui.glade: Changed range of limiter release time.
+	* process.c: removed explicit gain change code (now internal to limiter)
+
+2004-05-30  Steve Harris  <steve@plugin.org.uk>
+
+	* jam-ui.glade: changed minimum limiter release time to 1ms
+
+2004-05-08  Steve Harris  <steve@plugin.org.uk>
+
+	* controller/*: added a controller plugin. Creates thread to send OSC
+	  messages to the JAMin application. Causes segfaults in jack-rack when
+	  its removed, works in applyplugin, ecamegapedal and ardour.
+
+2004-05-06  Steve Harris  <steve@plugin.org.uk>
+
+	* state.c, compressor-ui.c: added global settings to XML file. all
+	  should be read, but only the gang states are written correctly.
+	  Added gang accessor funcs to compressor ui code.
+
+2004-05-05  Steve Harris  <steve@plugin.org.uk>
+
+	* configure.in, main.c: made OSC library optional, fixed scene change
+	  code
+
+2004-05-04  Steve Harris  <steve@plugin.org.uk>
+
+	* main.c, jamin-scene.c: added OSC control to jamin. Additional handler
+	  in main.c to accept scene change numbers on /scene. Additional
+	  command line tool to send OSC messages for testing.
+
+2004-05-02  Steve Harris  <steve@plugin.org.uk>
+
+	* process.c (latcorbuf): Fixed limiter bypass. Added yet another
+	  ringbuffer to hold the output of the compressors to allow the limiter
+	  to be bypassed correctly.
+
+2004-03-23  Jack O'Quin  <joq@io.com>
+
+	* io.c: use first two JACK driver playback ports for default
+	  output destination.  Now works with any driver, not just ALSA.
+
+2004-02-22  Steve Harris  <steve@plugin.org.uk>
+
+	* process.c (run_eq): linked UI controls to bypass for EQ and limiter
+
+	* process.c (process_set_eq_bypass, process_set_limiter_bypass):
+	  new functions, used to control bypass from other threads.
+
+2004-02-17  Steve Harris  <steve@plugin.org.uk>
+
+	* process.c (run_eq): fixed off-by-one-octave bug in frequency ->
+	  bin mappings
+
+2004-01-27  Steve Harris  <steve@plugin.org.uk>
+
+	* process.c (process, run_eq): added functions to control
+	  active/mute/byapss state of each crossover band
+
+	* process.h: added macros for band states
+
+2004-01-18  Steve Harris  <steve@plugin.org.uk>
+
+	* callbacks.c (on_new1_activate): now calls s_load_session with NULL
+	  to load default session file.
+
+2002-01-13  Steve Harris  <steve@plugin.org.uk>
+
+	* hdeq.c (hdeq_low2mid_set, hdeq_mid2high_set, comp_curve_box_motion):
+	  replace stack allocated char arrays with pointers and
+	  g_strdup_printf
+
+	* scenes.c (clear_scene, unset_scene_buttons): replace stack
+	  allocated char arrays with pointers and g_strdup_printf
+
+	* configure.in: version -> 0.8.2
+
+2004-01-12  Steve Harris  <steve@plugin.org.uk>
+
+	* hdeq.c (hdeq_curve_motion): Changed stack alloced sprintfs to be
+	  heap alloced (with g_strdup_printf)
+
+	* configure.in: version -> 0.8.1
+
+2004-01-12  Jack O'Quin  <joq@io.com>
+
+	* First beta release [0.8.0].
