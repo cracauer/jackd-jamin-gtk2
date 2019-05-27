@@ -100,19 +100,12 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE")
 AM_GLIB_GNU_GETTEXT
 
 libnn=lib
-case "${host_os}" in
-  linux*)
-  case "${host_cpu}" in
-    x86_64|mips64|ppc64|sparc64|s390x)
-    libnn=lib64
-  esac
-esac
 
 if test "${libdir}" = '${exec_prefix}/lib'; then
   libdir='${exec_prefix}/'${libnn}
 fi
 
-JAMIN_LIBS="$FFTW_LIBS $XML_LIBS $JACK_LIBS $OSC_LIBS"
+JAMIN_LIBS="$FFTW_LIBS $XML_LIBS $JACK_LIBS $OSC_LIBS -ldl"
 AC_SUBST(JAMIN_LIBS)
 JAMIN_CFLAGS="-g $FFTW_CFLAGS $JACK_CFAGS $XML_CFLAGS $OSC_CFLAGS"
 AC_SUBST(JAMIN_CFLAGS)

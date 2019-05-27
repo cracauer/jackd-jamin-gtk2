@@ -1,10 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 _Name=JAMin
 _GenericName=
 _Comment=JACK Audio Mastering interface
-Categories=Application;AudioVideo;
-Exec=jamin
+Categories=AudioVideo;Audio;
+Keywords=audio;sound;mastering;ladspa
+Exec=/usr/share/jamin/jamin-wrapper %f
 Icon=jamin.svg
 MimeType=application/x-jamin;
 StartupNotify=true

@@ -973,7 +973,7 @@ void s_startElement(void *user_data, const xmlChar *name, const xmlChar **attrs)
 		free(errstr);
 	    }
 	} else {
-	    errstr = g_strdup_printf("Unhandled global paramter: %s\n", symbol);
+	    errstr = g_strdup_printf("Unhandled global parameter: %s\n", symbol);
 	    message (GTK_MESSAGE_WARNING, errstr);
 	    free(errstr);
 	}
