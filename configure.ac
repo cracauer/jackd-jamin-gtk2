@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT(configure.in)
-AM_INIT_AUTOMAKE(jamin, 0.98.9)
+AC_INIT(jamin, 1.16.1, cracauer@cons.org)
+AM_INIT_AUTOMAKE([1.16.1])
 AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE
 

@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
 	-DPACKAGE_LIB_DIR=\""$(libdir)"\" \
 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
@@ -37,7 +37,7 @@ jamin_SOURCES = \
 	limiter-ui.c limiter-ui.h \
 	presets-ui.c presets-ui.h \
 	main.c main.h \
-	multiout-ui.c multiout-ui.h \	
+	multiout-ui.c multiout-ui.h \
 	plugin.c plugin.h \
 	process.c process.h \
 	resource.c resource.h \
