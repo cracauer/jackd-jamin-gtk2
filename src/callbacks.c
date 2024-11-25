@@ -58,6 +58,7 @@
 
 /* vi:set ts=8 sts=4 sw=4: */
 
+GtkNotebook *l_notebook1;
 
 static char             *help_ptr = NULL, scene_name_text[100];
 static gboolean         text_focus = FALSE, force_keypress_help = FALSE;

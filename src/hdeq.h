@@ -65,7 +65,7 @@ void hdeq_notebook1_set_page (guint page_num);
 int get_current_notebook1_page ();
 
 
-GtkNotebook *l_notebook1;
+extern GtkNotebook *l_notebook1;
 
 
 #endif
